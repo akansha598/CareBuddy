@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp.jsx';
 import SignIn from './pages/SignIn.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import SignUpAdmin from './pages/SignUpAdmin.jsx';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path='/about' element={<About />} />          
           <Route path='/sign-in' element={<SignIn />} />
           <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/sign-up-admin' element={<SignUpAdmin />} />
         </Routes>
       <Footer />
     </BrowserRouter>

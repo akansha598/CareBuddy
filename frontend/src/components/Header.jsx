@@ -11,7 +11,7 @@ export default function Header() {
       <Link to='/'>
         <div className='flex items-center gap-2'>
           <img src={family} height={40} width={40} alt="logo" />
-          <span className='text-xl font-extrabold'>CareBuddy</span>
+          <span className='text-[#6531e0] text-2xl font-extrabold'>CareBuddy</span>
         </div>
       </Link>
 
