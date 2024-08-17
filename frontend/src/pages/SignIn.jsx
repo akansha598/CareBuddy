@@ -3,12 +3,15 @@ import { GiSpikedBall } from "react-icons/gi";
 import {Link,useNavigate} from 'react-router-dom';
 import OAuth from '../components/OAuth';
 import { toast } from 'react-toastify';
+import {useSelector, useDispatch} from 'react-redux';
+import { signInStart,signInSuccess,signInFailure } from '../redux/user/userSlice.js';
 
 export default function SignIn() {
   const [formData,setFormData]=useState({});
   const [loading,setLoading]=useState(false);
 
   const navigate=useNavigate();
+  const dispatch=useDispatch();
 
   const handleChange=(e)=>{
     //console.log(e.target.value);
@@ -22,8 +25,8 @@ export default function SignIn() {
       return toast.error('Please fill out all fields!');
     }
     try{
-        //dispatch(signInStart());
-        setLoading(true);
+        dispatch(signInStart());
+        //setLoading(true);
         const res=await fetch('/api/user/signin',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
@@ -33,16 +36,16 @@ export default function SignIn() {
       //console.log(data);
       if (!res.ok) 
       {
-        //dispatch(signInFailure(data.message))
-        setLoading(false);
+        dispatch(signInFailure(data.message));
+        //setLoading(false);
         return toast.error(data);
       }   
-      //dispatch(signInSuccess(data));
+      dispatch(signInSuccess(data));
       toast.success("Signin successfull!");
       navigate('/');
     }
     catch(err){
-      //dispatch(signInFailure(err.message));
+      dispatch(signInFailure(err.message));
       return toast.error(err.message);
     }
   }

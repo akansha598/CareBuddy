@@ -2,11 +2,14 @@ import React from 'react'
 import family from '../assets/family.png';
 import {Link, useNavigate} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
+import { signOutSuccess } from '../redux/user/userSlice.js';
+import { toast } from 'react-toastify';
 
 export default function Header() {
 
   const dispatch=useDispatch();
   const { currentUser } = useSelector((state) => state.user);
+  //console.log(currentUser);
 
   const navigate=useNavigate();
 
@@ -16,13 +19,14 @@ export default function Header() {
             method: 'POST',
         });
         const data=await res.json();
+        //console.log(data);
         if(!res.ok)
         {
           return toast.error(data);
         }
-        //dispatch(signOutSuccess());
+        dispatch(signOutSuccess());
         toast.success(data);
-        navigate('/login');
+        navigate('/sign-in');
     }
     catch(err){
         return toast.error('Internet not connected!');
