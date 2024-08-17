@@ -1,10 +1,33 @@
 import React from 'react'
 import family from '../assets/family.png';
 import {Link, useNavigate} from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
 
 export default function Header() {
 
-  const currentUser= null;
+  const dispatch=useDispatch();
+  const { currentUser } = useSelector((state) => state.user);
+
+  const navigate=useNavigate();
+
+  const handleSignOut=async()=>{
+    try{
+        const res=await fetch('/api/user/signout', {
+            method: 'POST',
+        });
+        const data=await res.json();
+        if(!res.ok)
+        {
+          return toast.error(data);
+        }
+        //dispatch(signOutSuccess());
+        toast.success(data);
+        navigate('/login');
+    }
+    catch(err){
+        return toast.error('Internet not connected!');
+    }
+  }
 
   return (
     <section className='flex items-center justify-around border-gray-200 border-b py-3 full-screen-bg'>
