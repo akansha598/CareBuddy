@@ -19,3 +19,5 @@ app.listen(3000, ()=>{
 app.get("/test",(req,res,next)=>{
     return res.send("Hello");
 });
+
+app.use("/api/user",userRoutes);
