@@ -2,10 +2,50 @@ import React,{useState} from 'react'
 import { GiSpikedBall } from "react-icons/gi";
 import {Link,useNavigate} from 'react-router-dom';
 import OAuth from '../components/OAuth';
+import { toast } from 'react-toastify';
 
 export default function SignIn() {
+  const [formData,setFormData]=useState({});
+  const [loading,setLoading]=useState(false);
 
-  const handleChange=()=>{} 
+  const navigate=useNavigate();
+
+  const handleChange=(e)=>{
+    //console.log(e.target.value);
+    setFormData({...formData,[e.target.id]:e.target.value.trim()});
+  }
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    if(!formData.username || !formData.email || !formData.password)
+    {
+      return toast.error('Please fill out all fields!');
+    }
+    try{
+        //dispatch(signInStart());
+        setLoading(true);
+        const res=await fetch('/api/user/signin',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(formData),
+      });
+      const data=await res.json();      
+      //console.log(data);
+      if (!res.ok) 
+      {
+        //dispatch(signInFailure(data.message))
+        setLoading(false);
+        return toast.error(data);
+      }   
+      //dispatch(signInSuccess(data));
+      toast.success("Signin successfull!");
+      navigate('/');
+    }
+    catch(err){
+      //dispatch(signInFailure(err.message));
+      return toast.error(err.message);
+    }
+  }
   
   return (
     <section className='flex items-center justify-evenly pt-16 full-screen-bg'> 
@@ -19,7 +59,7 @@ export default function SignIn() {
         </ul>
       </div>
       <div>
-        <form className='flex flex-col gap-4 m-20 p-10 outline outline-[#6531e0] rounded-xl'>
+        <form onSubmit={handleSubmit} className='flex flex-col gap-4 m-20 p-10 outline outline-[#6531e0] rounded-xl'>
           <input size={40} type="name" placeholder='Username' className='border border-slate-600 p-3 rounded-lg' id='username' onChange={handleChange} />
           <input type="email" placeholder='E-mail address' className='border border-slate-600 p-3 rounded-lg' id='email' onChange={handleChange} />
           <input type="password" placeholder='Password' className=' border border-slate-600 p-3 rounded-lg' id='password' onChange={handleChange} />
