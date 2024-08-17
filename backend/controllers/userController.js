@@ -57,3 +57,15 @@ export const signin = async(req,res,next) =>{
            .json('Signin Unsuccessfull!');
     }
 }
+
+export const signout=async(req,res,next)=>{
+    try{
+      res.clearCookie('access_token')
+         .status(200)
+         .json('User has been Signed Out!');
+    }
+    catch(err){
+        res.status(401)
+           .json('Unable to Logout!');
+    }
+}
