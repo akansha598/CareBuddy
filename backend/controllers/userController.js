@@ -1,6 +1,8 @@
-import User from "../Models/userModel.js";
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+
+import User from "../Models/userModel.js";
+import Admin from "../models/adminModel.js";
 
 export const getAllUsers = async(req,res,next) =>{}
 
@@ -35,6 +37,8 @@ export const signin = async(req,res,next) =>{
         .json('All fields are required!');
     try{
         const validUser=await User.findOne({email});
+        if(!validUser)
+        validUser=await Admin.findOne({email});
         //console.log(validUser);
         if(!validUser)
         return res.status(404)
