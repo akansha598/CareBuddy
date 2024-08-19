@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
 import userRoutes from './routes/userRoute.js';
+import adminRoutes from './routes/adminRoute.js';
 
 dotenv.config();
 
@@ -23,3 +24,4 @@ app.get("/test",(req,res,next)=>{
 });
 
 app.use("/api/user",userRoutes);
+app.use("/api/admin",adminRoutes);
