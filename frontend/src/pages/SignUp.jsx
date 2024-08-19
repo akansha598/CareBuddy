@@ -16,7 +16,7 @@ export default function SignUp() {
 
   const handleSubmit=async(e)=>{
     e.preventDefault();
-    if(!formData.name || !formData.username || !formData.email || !formData.password || !formData.pwd)
+    if(!formData.name || !formData.email || !formData.password || !formData.pwd)
     {
       return toast.error('Please fill out all fields!');
     }
@@ -59,7 +59,6 @@ export default function SignUp() {
       <div>
         <form onSubmit={handleSubmit} className='flex flex-col gap-4 mx-10 p-10 outline outline-[#6531e0] rounded-xl'>
           <input type="text" size={40} placeholder='Full Name' className='border border-slate-600 p-3 rounded-lg' id='name' onChange={handleChange} />
-          <input size={40} type="name" placeholder='Username' className='border border-slate-600 p-3 rounded-lg' id='username' onChange={handleChange} />
           <input type="email" placeholder='E-mail address' className='border border-slate-600 p-3 rounded-lg' id='email' onChange={handleChange} />
           <input type="password" placeholder='Password' className=' border border-slate-600 p-3 rounded-lg' id='password' onChange={handleChange} />
           <input type="password" placeholder='Re-type Password' className='border border-slate-600 p-3 rounded-lg' id='pwd' onChange={handleChange} />

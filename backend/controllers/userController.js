@@ -1,22 +1,21 @@
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
-import User from "../Models/userModel.js";
+import User from "../models/userModel.js";
 import Admin from "../models/adminModel.js";
 
 export const getAllUsers = async(req,res,next) =>{}
 
 export const signup = async(req,res,next) =>{
     //console.log(req.body);
-    const {name,email,username,password}=req.body;
-    if(!name || !username || !email || !password || name==='' || username==='' || password==='' || email==='')
+    const {name,email,password}=req.body;
+    if(!name || !email || !password || name==='' || password==='' || email==='')
     res.status(499)
         .json('All fields are required!');
     const hashedPassword=bcryptjs.hashSync(password,10);
     const newUser=new User({
         name,
-        email,
-        username,        
+        email,       
         password:hashedPassword
     });
     try{
@@ -24,15 +23,18 @@ export const signup = async(req,res,next) =>{
         res.status(200)
            .json('Account created successfully!');
     }
-    catch(err){
-        res.status(402)
-           .json('User already exists!');
+    catch (err) {
+        console.error('Error creating account:', err);
+        if (err.code && err.code === 11000) { 
+            return res.status(409).json('User already exists!');
+        }
+        res.status(500).json('Server error!');
     }
 }
 
 export const signin = async(req,res,next) =>{
-    const {email,username,password}=req.body;
-    if(!username || !email || !password || username==='' || password==='' || email==='')
+    const {email,password}=req.body;
+    if(!email || !password || password==='' || email==='')
     res.status(499)
         .json('All fields are required!');
     try{

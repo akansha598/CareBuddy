@@ -20,7 +20,7 @@ export default function SignIn() {
 
   const handleSubmit=async(e)=>{
     e.preventDefault();
-    if(!formData.username || !formData.email || !formData.password)
+    if(!formData.email || !formData.password)
     {
       return toast.error('Please fill out all fields!');
     }
@@ -63,9 +63,8 @@ export default function SignIn() {
       </div>
       <div>
         <form onSubmit={handleSubmit} className='flex flex-col gap-4 m-20 p-10 outline outline-[#6531e0] rounded-xl'>
-          <input size={40} type="name" placeholder='Username' className='border border-slate-600 p-3 rounded-lg' id='username' onChange={handleChange} />
-          <input type="email" placeholder='E-mail address' className='border border-slate-600 p-3 rounded-lg' id='email' onChange={handleChange} />
-          <input type="password" placeholder='Password' className=' border border-slate-600 p-3 rounded-lg' id='password' onChange={handleChange} />
+          <input size={40} type="email" placeholder='E-mail address' className='border border-slate-600 p-3 rounded-lg' id='email' onChange={handleChange} />
+          <input size={40} type="password" placeholder='Password' className=' border border-slate-600 p-3 rounded-lg' id='password' onChange={handleChange} />
           <button type='submit' className='bg-[#6531e0] text-white text-lg outline rounded-full p-2 px-5 hover:text-white hover:bg-[#6531e0]'>Sign In</button>
           <OAuth />
           <div className='gap-2'> 
