@@ -10,7 +10,19 @@ const adminSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    password: {
+        type: String,
+        required: true
+    },
     age: {
+        type: Number,
+        required: true
+    },
+    phone: {
+        type: Number,
+        required: true
+    },
+    charge: {
         type: Number,
         required: true
     },
@@ -23,10 +35,6 @@ const adminSchema = new mongoose.Schema({
         type: String,
         required: true,
         enum: ['caretaker', 'babysitter'] 
-    },
-    password: {
-        type: String,
-        required: true
     },
     rating: {
         type: Number,
