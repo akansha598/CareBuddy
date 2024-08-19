@@ -6,6 +6,8 @@ import { toast } from 'react-toastify';
 import {useSelector, useDispatch} from 'react-redux';
 import { signInStart,signInSuccess,signInFailure } from '../redux/user/userSlice.js';
 
+import family from '../assets/family.png';
+
 export default function SignIn() {
   const [formData,setFormData]=useState({});
   const [loading,setLoading]=useState(false);
@@ -63,6 +65,10 @@ export default function SignIn() {
       </div>
       <div>
         <form onSubmit={handleSubmit} className='flex flex-col gap-4 m-20 p-10 outline outline-[#6531e0] rounded-xl'>
+          <div className='flex items-center justify-center gap-2 pb-2'>
+            <img src={family} height={60} width={60} alt="logo" />
+            <span className='text-[#6531e0] text-3xl font-extrabold'>CareBuddy</span>
+          </div>          
           <input size={40} type="email" placeholder='E-mail address' className='border border-slate-600 p-3 rounded-lg' id='email' onChange={handleChange} />
           <input size={40} type="password" placeholder='Password' className=' border border-slate-600 p-3 rounded-lg' id='password' onChange={handleChange} />
           <button type='submit' className='bg-[#6531e0] text-white text-lg outline rounded-full p-2 px-5 hover:text-white hover:bg-[#6531e0]'>Sign In</button>

@@ -4,6 +4,8 @@ import {Link,useNavigate} from 'react-router-dom';
 import OAuth from '../components/OAuth';
 import { toast } from 'react-toastify';
 
+import family from '../assets/family.png';
+
 export default function SignUp() {
   const [formData,setFormData]=useState({});
   const [loading,setLoading]=useState(false);
@@ -58,6 +60,10 @@ export default function SignUp() {
       </div>
       <div>
         <form onSubmit={handleSubmit} className='flex flex-col gap-4 mx-10 p-10 outline outline-[#6531e0] rounded-xl'>
+          <div className='flex items-center justify-center gap-2 pb-2'>
+            <img src={family} height={60} width={60} alt="logo" />
+            <span className='text-[#6531e0] text-3xl font-extrabold'>CareBuddy</span>
+          </div>
           <input type="text" size={40} placeholder='Full Name' className='border border-slate-600 p-3 rounded-lg' id='name' onChange={handleChange} />
           <input type="email" placeholder='E-mail address' className='border border-slate-600 p-3 rounded-lg' id='email' onChange={handleChange} />
           <input type="password" placeholder='Password' className=' border border-slate-600 p-3 rounded-lg' id='password' onChange={handleChange} />
