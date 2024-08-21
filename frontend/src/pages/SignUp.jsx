@@ -43,7 +43,7 @@ export default function SignUp() {
       navigate('/sign-in');
     }
     catch(err){
-      return toast.error(err.message);
+      return toast.error('Internet not connected!');
     }
   }
   

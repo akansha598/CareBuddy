@@ -48,7 +48,7 @@ export default function SignIn() {
     }
     catch(err){
       dispatch(signInFailure(err.message));
-      return toast.error(err.message);
+      return toast.error('Internet not connected!');
     }
   }
   
