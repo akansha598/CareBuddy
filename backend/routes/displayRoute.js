@@ -4,6 +4,6 @@ import {displayCaretakers, displayBabysitters} from '../controllers/displayContr
 const router=express.Router();
 
 router.get("/caretaker",displayCaretakers);
-router.post("/babysitter",displayBabysitters);
+router.get("/babysitter",displayBabysitters);
 
 export default router;  

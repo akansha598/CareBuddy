@@ -7,7 +7,7 @@ import User from "../models/userModel.js";
 export const getAllAdmins = async (req, res, next) => {};
 
 export const signupAdmin = async (req, res, next) => {
-    const { name, email, age, gender, profession, password } = req.body;
+    const { name, email, age, gender, phone, charge, profession, password } = req.body;
 
     if (!name || !email || !age || !gender || !profession || !password) {
         return res.status(400).json('All fields are required!');
@@ -18,6 +18,8 @@ export const signupAdmin = async (req, res, next) => {
         email,
         age,
         gender,
+        phone,
+        charge,
         profession,
         password: hashedPassword
     });

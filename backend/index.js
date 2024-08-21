@@ -28,4 +28,4 @@ app.get("/test",(req,res,next)=>{
 app.use("/api/user",userRoutes);
 app.use("/api/admin",adminRoutes);
 app.use("/api/booking",bookingRoutes);
-app.use("/api/admin",displayRoutes);
+app.use("/api/display",displayRoutes);
