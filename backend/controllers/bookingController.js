@@ -5,7 +5,7 @@ export const createBooking = async (req, res) => {
         const { professionEmail, userEmail, userAddress, dateFrom, dateTo, specialRequests } = req.body;
 
         if (!professionEmail || !userEmail || !userAddress || !dateFrom || !dateTo) {
-            return res.status(400).json({ error: 'All fields are required' });
+            return res.status(400).json({ error: 'All fields are required!' });
         }
         const newBooking = new Booking({
             professionEmail,
@@ -19,9 +19,9 @@ export const createBooking = async (req, res) => {
         await newBooking.save();
         res.status(201).json({ message: 'Booking created successfully!', booking: newBooking });
     } 
-    catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal server error!' });
+    catch (err) {
+        console.error(err);
+        res.status(500).json({ err: 'Internal server error!' });
     }
 };
 

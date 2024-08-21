@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 
 import userRoutes from './routes/userRoute.js';
 import adminRoutes from './routes/adminRoute.js';
+import bookingRoutes from './routes/bookingRoute.js';
+import displayRoutes from './routes/displayRoute.js';
 
 dotenv.config();
 
@@ -25,3 +27,5 @@ app.get("/test",(req,res,next)=>{
 
 app.use("/api/user",userRoutes);
 app.use("/api/admin",adminRoutes);
+app.use("/api/booking",bookingRoutes);
+app.use("/api/admin",displayRoutes);
