@@ -1,5 +1,22 @@
 import Admin from "../models/adminModel.js";
 
+export const displayAdmins =async(req,res)=>{
+    try {
+        const admins = await Admin.find();
+        res.status(200).json({
+            success: true,
+            data: admins
+        });
+    } 
+    catch (err) {
+        res.status(500).json({
+            success: false,
+            message: 'Error retrieving admins!',
+            error: err.message
+        });
+    }
+}
+
 export const displayCaretakers = async (req, res) => {
     try {
         const caretakers = await Admin.find({ profession: 'caretaker' }).exec();
