@@ -49,7 +49,7 @@ const Products = () => {
             Helpers
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-          We take pride in showcasing some of our most highly reviewed caregivers!
+          We take pride in showcasing some of our most highly reviewed caregivers
           </p>
         </div>
         {/* Body section */}

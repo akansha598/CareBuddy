@@ -52,8 +52,8 @@ export default function Header() {
         <Link to="/stories">
           <li className="font-bold hover:text-[#6531e0] text-lg">Stories</li>
         </Link>
-        <Link to="/explore">
-          <li className="font-bold hover:text-[#6531e0] text-lg">Explore</li>
+        <Link to="/events">
+          <li className="font-bold hover:text-[#6531e0] text-lg">Events</li>
         </Link>
         <Link to="/contact">
           <li className="font-bold hover:text-[#6531e0] text-lg">Contact Us</li>
@@ -68,12 +68,18 @@ export default function Header() {
           </button>
         ) : (
           <Link to="/sign-in">
-            <button className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white">
+            <button className="text-[#6531e0] text-lg font-semibold outline rounded-xl p-1 px-4 hover:text-white hover:bg-[#6531e0]">
               Sign In
             </button>
           </Link>
         )}
-        
+
+        <button
+          onClick={handleOrderPopup}
+          className="text-[#6531e0] text-lg font-semibold outline rounded-xl p-1 px-4 hover:text-white hover:bg-[#6531e0]"
+        >
+          Book Now
+        </button>
         <div>
           <DarkMode />
         </div>
