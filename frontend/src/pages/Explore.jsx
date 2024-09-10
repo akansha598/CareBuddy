@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
+import { useEffect, useState } from 'react';
 
 
 function Explore() {
+  const { currentUser } = useSelector((state) => state.user);
   const [babysitters, setBabysitters] = useState([]);
   const [caretakers, setCaretakers] = useState([]);
 
@@ -100,13 +103,25 @@ function Explore() {
                   </div>
 
                   {/* Button at the bottom */}
-                  <div className="flex justify-end items-end mt-5">
-                    <button
-                      className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
-                    >
-                      Book Now
-                    </button>
+                  <div className='flex justify-end items-end mt-5'>
+                    {currentUser ? (
+                      <button
+                        className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+                      >
+                        Book Now
+                      </button>
+                    ) : (
+                      <Link to="/sign-in">
+                        <button
+                          className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+                        >
+                          View details
+                        </button>
+                      </Link>
+
+                    )}
                   </div>
+
                 </div>
               </div>
             </div>
@@ -155,12 +170,23 @@ function Explore() {
                   </div>
 
                   {/* Button at the bottom */}
-                  <div className="flex justify-end items-end mt-5">
-                    <button
-                      className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
-                    >
-                      Book Now
-                    </button>
+                  <div className='flex justify-end items-end mt-5'>
+                    {currentUser ? (
+                      <button
+                        className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+                      >
+                        Book Now
+                      </button>
+                    ) : (
+                      <Link to="/sign-in">
+                        <button
+                          className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+                        >
+                          View details
+                        </button>
+                      </Link>
+
+                    )}
                   </div>
                 </div>
               </div>
