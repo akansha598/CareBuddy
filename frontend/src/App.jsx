@@ -9,6 +9,7 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import SignUpAdmin from './pages/SignUpAdmin.jsx';
 import Explore from './pages/Explore.jsx';
+import Contact from './pages/Contact.jsx';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path='/sign-in' element={<SignIn />} />
           <Route path='/sign-up' element={<SignUp />} />
           <Route path='/sign-up-admin' element={<SignUpAdmin />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       <Footer />
     </BrowserRouter>

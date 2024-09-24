@@ -62,7 +62,7 @@ export default function Header() {
         {currentUser ? (
           <button
             onClick={handleSignOut}
-            className="text-[#6531e0] text-lg outline rounded-xl p-1 px-4 pb-1 hover:text-white hover:bg-[#6531e0]"
+            className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
           >
             Sign out
           </button>

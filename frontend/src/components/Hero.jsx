@@ -1,5 +1,7 @@
 import React from 'react';
 import Slider from "react-slick";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BannerImg = {
   backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/regal-airway-426618-d0.appspot.com/o/file-upload%2FWhatsApp%20Image%202024-09-08%20at%2011.13.32%20PM.jpeg?alt=media&token=09d10bf4-0f45-42c9-a2af-94d8558df746')",
@@ -48,17 +50,28 @@ function Hero() {
     slidesToShow: 1,
   };
 
-  return (
-    <div className='relative overflow-hidden min-h-[80vh] flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200' style={BannerImg}>
-      {/* Overlay for better text visibility */}
-      <div className='absolute inset-0 h-full w-full bg-black/40 z-0'></div>
+  // Initialize AOS for animations
+  React.useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
 
-      <div className="container relative z-10 h-full flex items-center">
+  return (
+    <div data-aos="zoom-in" className="relative overflow-hidden min-h-[80vh] flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200" style={BannerImg}>
+      {/* Overlay for better text visibility */}
+      <div className="absolute inset-0 h-full w-full bg-black/40 z-0"></div>
+
+      <div className="container relative z-10 h-full flex items-center ">
         <Slider {...settings} className="w-full">
           {ImageList.map((data) => (
             <div
               key={data.id}
-              className='relative flex flex-col items-center justify-end gap-8 h-[80vh] w-full'
+              className="relative flex flex-col items-center justify-end gap-8 h-[80vh] w-full"
               style={{
                 backgroundImage: `url(${data.img})`,
                 backgroundPosition: "center center",
@@ -76,13 +89,15 @@ function Hero() {
                 >
                   {data.title}
                 </h1>
-                <p data-aos="fade-up"
-                   data-aos-duration="500"
-                   data-aos-delay="100"
-                   className="text-sm mb-6 text-white">
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="500"
+                  data-aos-delay="100"
+                  className="text-sm mb-6 text-white"
+                >
                   {data.description}
                 </p>
-                <div className='flex justify-center'>
+                <div className="flex justify-center">
                   <button
                     className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
                   >

@@ -4,26 +4,26 @@ import Slider from "react-slick";
 const TestimonialData = [
   {
     id: 1,
-    name: "Victor",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Emily Johnson",
+    text: "Emily has been a tremendous support for my elderly mother. She is compassionate, attentive, and truly treats her with the utmost respect. My mother loves her company.!",
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
-    name: "Satya Nadella",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "James Taylor",
+    text: "James has been babysitting for us for over a year. He’s great with the kids and has a wonderful rapport with them. They enjoy playing games and learning new things together!.",
     img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
-    name: "Virat Kohli",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Ava Garcia",
+    text: "Ava is amazing! She not only looks after my kids but also teaches them valuable life skills. They adore her, and I appreciate how responsible she is. She always keeps me update!",
     img: "https://picsum.photos/104/104",
   },
   {
     id: 5,
-    name: "Sachin Tendulkar",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Michael Smith",
+    text: "Michael has been helping my father for the past six months. He is punctual, reliable, and very patient. He engages my dad in activities that keep him active and happy. .",
     img: "https://picsum.photos/103/103",
   },
 ];

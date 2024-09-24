@@ -1,12 +1,33 @@
 import { Link, useNavigate } from 'react-router-dom';
+import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+const BannerImg = {
+  backgroundImage: "url('https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg')",
+  backgroundPosition: "bottom",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  height: "100%",
+  width: "100%",
+};
 
 function Explore() {
+  React.useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   const { currentUser } = useSelector((state) => state.user);
   const [babysitters, setBabysitters] = useState([]);
   const [caretakers, setCaretakers] = useState([]);
@@ -63,17 +84,19 @@ function Explore() {
   }, []);
 
   return (
-    <div className='flex flex-col items-center mt-3 bg-secondary/10'>
-      <div className=' w-full'>
-        <h4 className='text-4xl font-bold flex flex-col items-center mt-3 text-secondary border-gray-300 rounded-lg bg-primary/40 p-2 m-2'>Baby-Sitters</h4>
+    <div className='flex flex-col justify-start items-center mt-3'>
+      <div className=' w-full '>
+        <h2 style={BannerImg} className="text-4xl font-bold flex flex-col items-center mt-3 text-white border-gray-300 rounded-lg bg-black p-2 m-2" data-aos="zoom-in">
+          Baby-Sitters
+        </h2>
         <div className="flex flex-row flex-wrap justify-start m-5">
           {babysitters.map((data) => (
-            <div className="card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data._id}>
+            <div className="w-[450px] card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data._id}>
               <div className="flex flex-row">
                 {/* Image on the left */}
-                <div className="w-1/2 m-3">
+                <div className=" w-[150px] m-3">
                   <img
-                    className="img-fluid rounded-start border rounded-lg"
+                    className=" img-fluid rounded-start border rounded-lg"
                     style={{ height: "180px", width: "100%", objectFit: "cover" }}
                     src="https://passport-photo.online/images/cms/prepare_light_b364e3ec37.webp?quality=80&format=webp&width=1920"
                     alt="Card image cap"
@@ -132,13 +155,15 @@ function Explore() {
 
 
       <div className=' w-full'>
-        <h4 className='text-4xl font-bold flex flex-col items-center mt-3 text-secondary border-gray-300 rounded-lg bg-primary/40 p-2 m-2'>Care-Takers</h4>
+      <h2 style={BannerImg} className="text-4xl font-bold flex flex-col items-center mt-3 text-white border-gray-300 rounded-lg bg-black p-2 m-2" data-aos="zoom-in">
+          Care-Takers
+        </h2>
         <div className="flex flex-row flex-wrap justify-start m-5">
           {caretakers.map((data) => (
-            <div className="card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data._id}>
+            <div className="w-[450px] card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data._id}>
               <div className="flex flex-row">
                 {/* Image on the left */}
-                <div className="w-1/2 m-3">
+                <div className="w-[150px] m-3">
                   <img
                     className="img-fluid rounded-start border rounded-lg"
                     style={{ height: "180px", width: "100%", objectFit: "cover" }}
