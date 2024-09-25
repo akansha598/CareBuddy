@@ -10,6 +10,7 @@ import Footer from './components/Footer.jsx';
 import SignUpAdmin from './pages/SignUpAdmin.jsx';
 import Explore from './pages/Explore.jsx';
 import Contact from './pages/Contact.jsx';
+import Booking from './pages/Booking.jsx';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path='/sign-up' element={<SignUp />} />
           <Route path='/sign-up-admin' element={<SignUpAdmin />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/booking' element={<Booking />} />
         </Routes>
       <Footer />
     </BrowserRouter>

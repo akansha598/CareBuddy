@@ -128,11 +128,14 @@ function Explore() {
                   {/* Button at the bottom */}
                   <div className='flex justify-end items-end mt-5'>
                     {currentUser ? (
+                      <Link to="/booking">
                       <button
                         className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
                       >
                         Book Now
                       </button>
+                      </Link>
+                      
                     ) : (
                       <Link to="/sign-in">
                         <button
