@@ -32,37 +32,72 @@ export const signup = async(req,res,next) =>{
     }
 }
 
-export const signin = async(req,res,next) =>{
-    const {email,password}=req.body;
-    if(!email || !password || password==='' || email==='')
-    res.status(499)
-        .json('All fields are required!');
-    try{
-        const validUser=await User.findOne({email});
-        if(!validUser)
-        validUser=await Admin.findOne({email});
-        //console.log(validUser);
-        if(!validUser)
-        return res.status(404)
-                  .json('User not found!');
-        const validPassword=bcryptjs.compareSync(password,validUser.password);
-        if(!validPassword)
-        return res.status(401)
-                  .json('Wrong credentials!');        
-        const token=jwt.sign({id: validUser._id}, process.env.JWT_SECRET);
-        //console.log(token);
-        const {password:pass, ...rest}=validUser._doc;
-        res.status(200)
-           .cookie('access_token',token,{
-            httpOnly:true,
-           })
-           .json(rest);
+// export const signin = async(req,res,next) =>{
+//     const {email,password}=req.body;
+//     if(!email || !password || password==='' || email==='')
+//     res.status(499)
+//         .json('All fields are required!');
+//     try{
+//         const validUser=await User.findOne({email});
+//         if(!validUser)
+//         validUser=await Admin.findOne({email});
+//         //console.log(validUser);
+//         if(!validUser)
+//         return res.status(404)
+//                   .json('User not found!');
+//         const validPassword=bcryptjs.compareSync(password,validUser.password);
+//         if(!validPassword)
+//         return res.status(401)
+//                   .json('Wrong credentials!');        
+//         const token=jwt.sign({id: validUser._id}, process.env.JWT_SECRET);
+//         //console.log(token);
+//         const {password:pass, ...rest}=validUser._doc;
+//         res.status(200)
+//            .cookie('access_token',token,{
+//             httpOnly:true,
+//            })
+//            .json(rest);
+//     }
+//     catch(err){
+//         res.status(401)
+//            .json('Signin Unsuccessfull!');
+//     }
+// }
+export const signin = async (req, res, next) => {
+    const { email, password } = req.body;
+
+    if (!email || !password || password === '' || email === '') {
+        return res.status(499).json('All fields are required!'); 
     }
-    catch(err){
-        res.status(401)
-           .json('Signin Unsuccessfull!');
+
+    try {
+        let validUser = await User.findOne({ email });
+        if (!validUser) validUser = await Admin.findOne({ email });
+
+        if (!validUser) {
+            return res.status(404).json('User not found!');
+        }
+
+        const validPassword = bcryptjs.compareSync(password, validUser.password);
+        if (!validPassword) {
+            return res.status(401).json('Wrong credentials!'); 
+        }
+
+        const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET);
+
+        const { password: pass, ...rest } = validUser._doc;
+        return res.status(200)
+            .cookie('access_token', token, {
+                httpOnly: true,
+                secure: false,  
+                sameSite: 'Lax', 
+            })
+            .json(rest); 
+    } catch (err) {
+        console.error('Signin error:', err);
+        return res.status(500).json('Signin Unsuccessful!'); 
     }
-}
+};
 
 export const signout=async(req,res,next)=>{
     try{
