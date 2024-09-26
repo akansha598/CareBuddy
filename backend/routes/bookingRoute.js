@@ -6,4 +6,4 @@ const router=express.Router();
 router.get("/displayBookings",displayMyBookings);
 router.post("/create",createBooking);
 
-export default router;  
+export default router; 

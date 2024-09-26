@@ -11,6 +11,7 @@ import SignUpAdmin from './pages/SignUpAdmin.jsx';
 import Explore from './pages/Explore.jsx';
 import Contact from './pages/Contact.jsx';
 import Booking from './pages/Booking.jsx';
+import Payment from './pages/Payment.jsx';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path='/sign-up-admin' element={<SignUpAdmin />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/booking' element={<Booking />} />
+          <Route path='/payment' element={<Payment />} />
         </Routes>
       <Footer />
     </BrowserRouter>
