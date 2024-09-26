@@ -1,9 +1,10 @@
 import express from 'express';
-import {displayMyBookings, createBooking} from '../controllers/bookingController.js';
+import { displayMyBookings, createBooking } from '../controllers/bookingController.js';
+import { verifyToken } from '../middleware/auth.js';  
 
-const router=express.Router();
+const router = express.Router();
 
-router.get("/displayBookings",displayMyBookings);
-router.post("/create",createBooking);
+router.get("/displayBookings", verifyToken, displayMyBookings);
+router.post("/create", verifyToken, createBooking);  
 
-export default router; 
+export default router;
