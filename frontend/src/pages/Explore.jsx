@@ -78,7 +78,7 @@ function Explore() {
         </h2>
         <div className="flex flex-row flex-wrap justify-start m-5">
           {babysitters.map((data) => (
-            <div className="w-[450px] card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data.id}>
+            <div className="w-[430px] card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data.id}>
               <div className="flex flex-row">
                 <div className="w-[150px] m-3">
                   <img
@@ -139,7 +139,7 @@ function Explore() {
         </h2>
         <div className="flex flex-row flex-wrap justify-start m-5">
           {caretakers.map((data) => (
-            <div className="w-[450px] card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data.id}>
+            <div className="w-[430px] card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data.id}>
               <div className="flex flex-row">
                 <div className="w-[150px] m-3">
                   <img
