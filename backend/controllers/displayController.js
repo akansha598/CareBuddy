@@ -1,4 +1,5 @@
 import Admin from "../models/adminModel.js";
+import Booking from "../models/bookingModel.js";
 
 export const displayAdmins =async(req,res)=>{
     try {
@@ -50,3 +51,21 @@ export const displayBabysitters = async (req, res) => {
         });
     }
 };
+
+export const displayUserBookings = async (req, res) => {
+    const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: 'Email query parameter is required!' });
+  }
+  try {
+    const bookings = await Booking.find({ userEmail: email });
+    if (bookings.length === 0) {
+      return res.status(404).json({ message: 'No bookings found for this email!' });
+    }
+    res.status(200).json(bookings);
+  } catch (err) {
+    console.error('Error retrieving user bookings:', err);
+    res.status(500).json({ error: 'Internal server error!' });
+  }
+}

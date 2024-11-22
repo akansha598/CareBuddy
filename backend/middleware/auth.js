@@ -26,10 +26,9 @@ import User from "../models/userModel.js";
 // };
 export const verifyToken = async (req, res, next) => {
     try {
-        console.log(req.user);
         console.log("Cookies:", req.cookies);  
         const token = req.cookies.access_token;  
-        console.log("Token:", token);  
+        //console.log("Token:", token);  
 
         if (!token) {
             return res.status(401).json('Access Denied: No Token Provided!');
