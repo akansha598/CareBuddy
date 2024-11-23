@@ -44,6 +44,8 @@ export default function SignIn() {
       }   
       dispatch(signInSuccess(data));
       toast.success("Signin successfull!");
+      localStorage.setItem('userEmail', data.email); 
+      console.log('Login successful, userEmail saved:', data.email);
       navigate('/');
     }
     catch(err){
