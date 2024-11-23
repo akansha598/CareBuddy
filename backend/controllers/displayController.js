@@ -53,7 +53,8 @@ export const displayBabysitters = async (req, res) => {
 };
 
 export const displayUserBookings = async (req, res) => {
-    const { email } = req.body;
+    //console.log(req.query.userEmail);
+    const email=req.query.userEmail;
 
   if (!email) {
     return res.status(400).json({ error: 'Email query parameter is required!' });

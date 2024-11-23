@@ -26,15 +26,4 @@ export const createBooking = async (req, res) => {
     }
 };
 
-export const displayMyBookings = async (req, res) => {
-    try {
-        //console.log(req.user);  
-        //const userEmail = req.user.email;
 
-        const bookings = await Booking.find(req.query.userEmail && { userEmail:req.query.userEmail  });
-        res.status(200).json({ bookings });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal server error!' });
-    }
-};
