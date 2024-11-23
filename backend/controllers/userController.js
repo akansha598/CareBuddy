@@ -110,3 +110,20 @@ export const signout=async(req,res,next)=>{
            .json('Unable to Logout!');
     }
 }
+
+export const getUserInfo = async (req, res) => {
+    const email = req.query.userEmail;
+    //console.log('Email:', email);
+    try {
+        const info = await Admin.findOne({ email: email }); // Correct query object
+
+        if (!info) {
+            return res.status(404).json({ error: 'No user found with this email!' });
+        }
+        //console.log(info);
+        res.status(200).json(info);
+    } catch (err) {
+        console.error('Error retrieving user info:', err);
+        res.status(500).json({ error: 'Internal server error!' });
+    }
+};
