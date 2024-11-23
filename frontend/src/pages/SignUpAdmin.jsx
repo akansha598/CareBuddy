@@ -179,6 +179,8 @@ export default function SignUpAdmin() {
                             <input type="checkbox" id='privacy' />
                             <label className='text-sm'>I would like to receive communications from<br /> CareBuddy according to the Privacy Policy.**</label>
                         </div>
+                        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/74a4beaa-b90d-4583-b003-a95cbabf0bdf">ChatBot</iframe>
+
                         <a
                             href="https://resident.uidai.gov.in/check-aadhaar-validity/en"
                             className='bg-gray-200 text-black text-lg outline rounded-full p-2 px-5 hover:bg-gray-300 text-center block'
@@ -212,6 +214,7 @@ export default function SignUpAdmin() {
                                 <span className='text-[#6531e0] text-sm hover:underline'>Sign up as Customer</span>
                             </Link>
                         </div>
+                        
                     </form>
                 </div>
             </div>

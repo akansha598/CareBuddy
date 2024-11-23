@@ -1,5 +1,9 @@
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 
 function MyBookings() {
   const [bookings, setBookings] = useState([]);
@@ -15,13 +19,14 @@ function MyBookings() {
 
       try {
         console.log("Fetching bookings for:", currentUser.email);
-        const response = await fetch(`/api/display/bookings?userEmail=${currentUser.email}`);
+        const response = await fetch(`/api/user/getInfo?userEmail=${currentUser.email}`);
         const Booking = await response.json();
         console.log("API Response:", Booking);
 
         if (response.ok) {
           // Adjust based on actual response structure
-          setBookings(Booking.data || Booking || []);
+          const bookingData = Array.isArray(Booking) ? Booking : [Booking];
+          setBookings(bookingData);
         } else {
           console.error('Response error:', Booking.error || response.status);
           setError(Booking.error || 'Failed to fetch bookings');
@@ -66,35 +71,44 @@ function MyBookings() {
                 <h2 className="text-3xl font-bold mb-5">Booking Details</h2>
                 <div className="flex flex-col justify-start items-start mb-5">
                   <p>
-                    <strong>User Email:</strong> {booking.userEmail}
+                    <strong> Name:</strong> {booking.name}
                   </p>
                   <p>
-                    <strong>Profession Email:</strong> {booking.professionEmail}
+                    <strong>Profession Email:</strong> {booking.email}
                   </p>
                   <p>
-                    <strong>User Address:</strong> {booking.userAddress}
+                    <strong>Charge:</strong> {booking.charge}
                   </p>
                   <p>
-                    <strong>Date From:</strong> {new Date(booking.dateFrom).toLocaleDateString()}
+                    <strong>Contact Number:</strong> {booking.phone}
                   </p>
                   <p>
-                    <strong>Date To:</strong> {new Date(booking.dateTo).toLocaleDateString()}
+                    <strong>Gender:</strong> {booking.gender === 'M' ? 'Male' : booking.gender === 'F' ? 'Female' : 'Other'}
                   </p>
                   <p>
-                    <strong>Status:</strong>{' '}
-                    {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
+                    <strong>Age:</strong> {booking.age}
                   </p>
                   <p>
-                    <strong>Special Requests:</strong>{' '}
-                    {booking.specialRequests || 'None'}
+                    <strong>Profession:</strong> {booking.profession}
                   </p>
+                 <strong>
+                 Rating:<span className="text-yellow-500">
+                        {Array.from({ length: 5 }, (_, index) => (
+                          <FontAwesomeIcon
+                            key={index}
+                            icon={index < booking.rating ? faStar : faStarEmpty}
+                          />
+                        ))}
+                      </span>
+                  </strong>
+                      
                 </div>
               </div>
               <div className="w-[200px] flex flex-col justify-between mr-10">
                 <img
                   className="img-fluid rounded-start border rounded-lg"
                   style={{ height: '180px', width: '100%', objectFit: 'cover' }}
-                  src="https://passport-photo.online/images/cms/prepare_light_b364e3ec37.webp?quality=80&format=webp&width=1920"
+                  src={booking.profilePic}
                   alt="User"
                 />
               </div>

@@ -1,0 +1,510 @@
+Caretaker_Name,Caretaker_Expertise,Medical_Issue1,Medical_Issue2,Medical_Issue3,Rating,Recommended
+Dr. Harsha Verma,Nutritionist,Epilepsy,Chronic Pain,Diabetes,3.7,0
+Dr. Meera Sinha,General Practitioner,Osteoporosis,Dementia,Cataracts,4.9,1
+Dr. Meera Kapoor,Nutritionist,Parkinson's,Osteoporosis,Hypertension,3.9,1
+Dr. Aditya Jain,General Practitioner,COPD,Stroke,Hypertension,3.7,0
+Dr. Nikhil Jain,Physiotherapist,Stroke,Cataracts,Epilepsy,4.5,0
+Dr. Ritika Sharma,Physiotherapist,Urinary Incontinence,Chronic Pain,Parkinson's,3.6,0
+Dr. Aarav Sharma,Physiotherapist,Heart Disease,Parkinson's,Depression,4.3,1
+Dr. Nikhil Khan,General Practitioner,Hypertension,Asthma,Arthritis,4.5,0
+Dr. Arjun Patel,Nurse,Dementia,Diabetes,Chronic Pain,4.7,1
+Dr. Diya Chopra,Physiotherapist,Cataracts,Epilepsy,Diabetes,4.0,0
+Dr. Amrita Mehta,Physiotherapist,Depression,Cataracts,Hearing Loss,4.1,1
+Dr. Ishani Pandey,Nutritionist,Obesity,Arthritis,Stroke,3.7,0
+Dr. Lakshmi Gupta,Geriatric Specialist,Respiratory Issues,Hypertension,Glaucoma,4.0,1
+Dr. Kavya Bhatia,Nutritionist,Osteoporosis,Heart Disease,Asthma,5.0,0
+Dr. Tanvi Choudhary,Nurse,COPD,Hypertension,Dementia,3.6,0
+Dr. Rohan Mehta,General Practitioner,COPD,Hearing Loss,Diabetes,3.9,0
+Dr. Neha Sinha,Physiotherapist,Dementia,Chronic Pain,Heart Disease,4.8,0
+Dr. Kavya Bhatia,Nutritionist,Depression,Urinary Incontinence,Arthritis,4.3,1
+Dr. Priya Mishra,Nutritionist,Glaucoma,Cataracts,Arthritis,4.2,0
+Dr. Rajesh Chopra,General Practitioner,Depression,Heart Disease,Parkinson's,3.6,1
+Dr. Neha Singh,Nutritionist,Asthma,Dementia,Heart Disease,3.9,0
+Dr. Priya Malhotra,Nurse,Obesity,Chronic Pain,COPD,3.7,0
+Dr. Diya Joshi,General Practitioner,Stroke,Diabetes,Parkinson's,3.4,0
+Dr. Amrita Agarwal,General Practitioner,Asthma,Hearing Loss,Glaucoma,5.0,0
+Dr. Priya Malhotra,Nurse,Parkinson's,Glaucoma,Stroke,3.7,1
+Dr. Ananya Iyer,Physiotherapist,Hearing Loss,Osteoporosis,Stroke,3.2,0
+Dr. Jyoti Nair,General Practitioner,Depression,Respiratory Issues,Glaucoma,3.3,0
+Dr. Vivaan Bhatia,Physiotherapist,Osteoporosis,Glaucoma,Depression,4.5,0
+Dr. Meera Kapoor,General Practitioner,Urinary Incontinence,Hearing Loss,Heart Disease,3.7,0
+Dr. Jyoti Pandey,Nutritionist,Glaucoma,Arthritis,Hearing Loss,4.1,1
+Dr. Gaurav Reddy,General Practitioner,Parkinson's,Dementia,Arthritis,4.6,1
+Dr. Aarav Sharma,General Practitioner,Glaucoma,Chronic Pain,Heart Disease,3.9,0
+Dr. Vivaan Verma,Physiotherapist,Dementia,Heart Disease,Depression,4.4,0
+Dr. Gaurav Iyer,Physiotherapist,Glaucoma,Stroke,Cataracts,4.9,1
+Dr. Aarav Sharma,Nutritionist,Asthma,Arthritis,Hypertension,4.8,1
+Dr. Vivaan Rao,General Practitioner,Dementia,Arthritis,Stroke,4.3,0
+Dr. Kavya Rao,Geriatric Specialist,Urinary Incontinence,Cataracts,Osteoporosis,4.7,1
+Dr. Siddharth Mishra,Geriatric Specialist,Diabetes,Osteoporosis,Hypertension,4.9,0
+Dr. Vivaan Verma,Physiotherapist,Chronic Pain,Osteoporosis,Parkinson's,4.0,1
+Dr. Arjun Patel,Nurse,Dementia,Diabetes,Chronic Pain,4.7,1
+Dr. Aditya Gupta,Physiotherapist,Osteoporosis,Epilepsy,Asthma,4.4,0
+Dr. Amrita Thakur,Physiotherapist,Urinary Incontinence,Cataracts,Glaucoma,3.6,1
+Dr. Manish Pandey,Physiotherapist,Glaucoma,Hearing Loss,Dementia,4.8,0
+Dr. Harsha Rao,Physiotherapist,Glaucoma,Cataracts,Stroke,3.6,1
+Dr. Ajay Malhotra,General Practitioner,Urinary Incontinence,Hearing Loss,Glaucoma,4.5,1
+Dr. Jyoti Nair,General Practitioner,Osteoporosis,Stroke,Chronic Pain,4.5,0
+Dr. Vivaan Verma,Physiotherapist,Epilepsy,Cataracts,Glaucoma,4.6,1
+Dr. Gaurav Choudhary,Nurse,Osteoporosis,Asthma,Epilepsy,3.7,0
+Dr. Meera Sinha,General Practitioner,Cataracts,Osteoporosis,Dementia,4.9,1
+Dr. Aarav Joshi,Nurse,Dementia,Hypertension,Parkinson's,4.5,1
+Dr. Ananya Iyer,Physiotherapist,Diabetes,Chronic Pain,Dementia,3.5,1
+Dr. Gaurav Reddy,General Practitioner,COPD,Chronic Pain,Glaucoma,4.6,0
+Dr. Tanvi Iyer,General Practitioner,Osteoporosis,COPD,Obesity,4.0,0
+Dr. Arjun Malhotra,Geriatric Specialist,Diabetes,Obesity,Glaucoma,4.0,0
+Dr. Rajesh Sharma,Geriatric Specialist,Arthritis,Dementia,Epilepsy,4.1,0
+Dr. Priya Mishra,Nutritionist,Glaucoma,Hypertension,Osteoporosis,4.2,1
+Dr. Vihaan Agarwal,Geriatric Specialist,Chronic Pain,Hearing Loss,Depression,4.7,1
+Dr. Arjun Patel,Nurse,Diabetes,Glaucoma,Heart Disease,4.2,0
+Dr. Harsha Bhatia,Nurse,Chronic Pain,Hypertension,COPD,3.8,0
+Dr. Arjun Patel,Physiotherapist,Diabetes,Heart Disease,COPD,4.1,0
+Dr. Neha Kapoor,Physiotherapist,Hearing Loss,Parkinson's,Dementia,4.1,1
+Dr. Arjun Malhotra,Nutritionist,Asthma,Hypertension,Stroke,3.5,0
+Dr. Arjun Patel,Nurse,Chronic Pain,Diabetes,Dementia,4.7,1
+Dr. Jyoti Nair,Geriatric Specialist,Hypertension,Chronic Pain,Hearing Loss,4.8,0
+Dr. Ishani Nair,Nutritionist,Dementia,Urinary Incontinence,Parkinson's,3.7,0
+Dr. Priya Mishra,Nutritionist,Chronic Pain,Osteoporosis,Diabetes,5.0,1
+Dr. Harsha Bhatia,Nurse,Dementia,Heart Disease,Diabetes,3.4,0
+Dr. Siddharth Malhotra,General Practitioner,Heart Disease,Diabetes,Dementia,5.0,0
+Dr. Ritika Joshi,General Practitioner,Epilepsy,COPD,Obesity,4.4,0
+Dr. Ananya Reddy,General Practitioner,Heart Disease,Diabetes,Osteoporosis,5.0,0
+Dr. Aditi Sinha,Nutritionist,Glaucoma,Cataracts,Hypertension,4.5,1
+Dr. Aarav Sharma,Nutritionist,Arthritis,Hypertension,Asthma,4.8,1
+Dr. Aarav Chopra,General Practitioner,Urinary Incontinence,Diabetes,Cataracts,4.6,1
+Dr. Vikas Gupta,General Practitioner,Glaucoma,Asthma,Hearing Loss,3.9,0
+Dr. Arjun Patel,Nurse,Diabetes,Dementia,Chronic Pain,4.7,1
+Dr. Aarav Chopra,General Practitioner,Osteoporosis,Obesity,Hearing Loss,4.6,0
+Dr. Lakshmi Jain,Physiotherapist,Depression,Arthritis,Heart Disease,4.2,0
+Dr. Kavya Bhatia,Nutritionist,Hypertension,Obesity,Asthma,4.3,0
+Dr. Ajay Malhotra,General Practitioner,COPD,Hearing Loss,Diabetes,5.0,0
+Dr. Rajesh Joshi,Nurse,Diabetes,Dementia,Osteoporosis,3.6,0
+Dr. Arjun Patel,Nurse,Dementia,Chronic Pain,Diabetes,4.7,1
+Dr. Tanvi Iyer,General Practitioner,Diabetes,Arthritis,Respiratory Issues,4.0,1
+Dr. Jyoti Desai,Nurse,Heart Disease,Obesity,Dementia,4.1,0
+Dr. Ananya Iyer,Geriatric Specialist,Obesity,Epilepsy,Asthma,4.7,1
+Dr. Ishani Desai,Geriatric Specialist,Obesity,Arthritis,Cataracts,4.0,0
+Dr. Amrita Mehta,Nutritionist,Dementia,Heart Disease,Osteoporosis,4.6,0
+Dr. Sai Singh,Physiotherapist,Arthritis,Dementia,Glaucoma,4.2,1
+Dr. Vikas Jain,Nurse,Dementia,Heart Disease,Hearing Loss,3.8,0
+Dr. Nikhil Gupta,Nutritionist,Stroke,Glaucoma,Urinary Incontinence,3.8,0
+Dr. Rajesh Sharma,Geriatric Specialist,Heart Disease,Parkinson's,Hearing Loss,4.0,0
+Dr. Tanvi Choudhary,Nutritionist,Glaucoma,Osteoporosis,Heart Disease,4.1,1
+Dr. Ishani Nair,Physiotherapist,Hypertension,Urinary Incontinence,Parkinson's,4.3,1
+Dr. Kavya Verma,Nutritionist,Hearing Loss,Glaucoma,Hypertension,4.9,1
+Dr. Vivaan Rao,Geriatric Specialist,Dementia,Osteoporosis,Cataracts,3.6,1
+Dr. Amrita Mehta,Nutritionist,Respiratory Issues,Chronic Pain,Hypertension,4.6,1
+Dr. Aditya Gupta,Physiotherapist,Depression,Respiratory Issues,Cataracts,4.3,0
+Dr. Vivaan Rao,General Practitioner,Parkinson's,Osteoporosis,Heart Disease,4.3,1
+Dr. Aravind Reddy,Nurse,Parkinson's,Chronic Pain,Dementia,3.7,1
+Dr. Lakshmi Khan,Nutritionist,Obesity,Epilepsy,Diabetes,4.0,0
+Dr. Meera Sinha,General Practitioner,Cataracts,Osteoporosis,Dementia,4.9,1
+Dr. Kavya Rao,Geriatric Specialist,Chronic Pain,Hearing Loss,Cataracts,3.9,0
+Dr. Vihaan Thakur,Nurse,Asthma,Obesity,Arthritis,4.0,0
+Dr. Ishani Nair,General Practitioner,Hypertension,Respiratory Issues,Cataracts,4.0,1
+Dr. Manish Pandey,Nurse,Glaucoma,Hypertension,Chronic Pain,4.5,1
+Dr. Sai Kapoor,Nurse,Chronic Pain,Osteoporosis,Glaucoma,4.8,1
+Dr. Vihaan Mehta,Physiotherapist,Chronic Pain,Heart Disease,Hearing Loss,3.5,1
+Dr. Aditya Gupta,Geriatric Specialist,Hearing Loss,Cataracts,Depression,4.2,1
+Dr. Vivaan Verma,Physiotherapist,Glaucoma,Cataracts,Epilepsy,4.6,1
+Dr. Rohan Agarwal,General Practitioner,Respiratory Issues,Stroke,Urinary Incontinence,4.9,1
+Dr. Rohan Thakur,Nutritionist,Respiratory Issues,Arthritis,Depression,3.8,0
+Dr. Pooja Agarwal,General Practitioner,Heart Disease,Stroke,Diabetes,3.6,0
+Dr. Kiran Bhatia,Physiotherapist,Chronic Pain,Heart Disease,Parkinson's,4.0,1
+Dr. Gaurav Reddy,Physiotherapist,Asthma,Osteoporosis,Glaucoma,4.4,0
+Dr. Arjun Mishra,General Practitioner,Cataracts,Dementia,Respiratory Issues,3.9,1
+Dr. Sai Singh,Physiotherapist,Diabetes,Chronic Pain,Asthma,3.9,0
+Dr. Kavya Verma,Geriatric Specialist,Asthma,Epilepsy,Hearing Loss,3.9,0
+Dr. Tanvi Choudhary,Nurse,Cataracts,Dementia,Respiratory Issues,3.3,0
+Dr. Kiran Verma,Geriatric Specialist,Diabetes,Respiratory Issues,Cataracts,3.9,1
+Dr. Ajay Mishra,Geriatric Specialist,Depression,Urinary Incontinence,Parkinson's,4.3,1
+Dr. Kavya Bhatia,Nutritionist,Parkinson's,Arthritis,Chronic Pain,5.0,1
+Dr. Pooja Thakur,Nutritionist,Cataracts,Diabetes,Chronic Pain,4.0,1
+Dr. Amrita Mehta,Nutritionist,Heart Disease,Diabetes,Hypertension,3.7,0
+Dr. Aditya Jain,Physiotherapist,Glaucoma,Arthritis,Parkinson's,4.4,1
+Dr. Priya Mishra,Nutritionist,Heart Disease,Stroke,Hypertension,5.0,0
+Dr. Jyoti Pandey,General Practitioner,Depression,Stroke,Glaucoma,4.0,1
+Dr. Ananya Iyer,Geriatric Specialist,Asthma,Obesity,Epilepsy,4.7,1
+Dr. Ananya Reddy,Geriatric Specialist,Hearing Loss,Glaucoma,Diabetes,3.9,1
+Dr. Tanvi Iyer,Physiotherapist,Diabetes,Heart Disease,Obesity,4.5,0
+Dr. Vivaan Verma,Geriatric Specialist,Diabetes,Glaucoma,Urinary Incontinence,4.1,1
+Dr. Meera Sinha,General Practitioner,Dementia,Cataracts,Osteoporosis,4.9,1
+Dr. Arjun Mishra,General Practitioner,Chronic Pain,Diabetes,COPD,3.9,0
+Dr. Diya Joshi,General Practitioner,Arthritis,Chronic Pain,Diabetes,3.7,0
+Dr. Lakshmi Jain,General Practitioner,Diabetes,Urinary Incontinence,Parkinson's,4.4,1
+Dr. Pooja Mehta,Nutritionist,Stroke,Dementia,Osteoporosis,3.7,0
+Dr. Jyoti Nair,General Practitioner,Glaucoma,Heart Disease,Depression,4.5,1
+Dr. Sneha Desai,Geriatric Specialist,Urinary Incontinence,Hearing Loss,Cataracts,4.3,1
+Dr. Aravind Choudhary,General Practitioner,Osteoporosis,Dementia,Parkinson's,4.7,1
+Dr. Aarav Chopra,General Practitioner,Glaucoma,Osteoporosis,Heart Disease,4.2,0
+Dr. Pooja Thakur,Geriatric Specialist,Glaucoma,Cataracts,Stroke,3.4,0
+Dr. Vihaan Mehta,Physiotherapist,Cataracts,Hypertension,Dementia,4.0,1
+Dr. Vivaan Bhatia,Physiotherapist,Diabetes,Respiratory Issues,Dementia,3.6,1
+Dr. Sneha Pandey,Nutritionist,Hearing Loss,Glaucoma,Dementia,4.9,0
+Dr. Ritika Chopra,Nutritionist,Heart Disease,Depression,Arthritis,3.7,1
+Dr. Harsha Verma,Nutritionist,Heart Disease,Obesity,Arthritis,3.9,0
+Dr. Aarav Sharma,General Practitioner,Depression,Hypertension,Osteoporosis,3.9,1
+Dr. Vivaan Verma,Physiotherapist,Cataracts,Glaucoma,Epilepsy,4.6,1
+Dr. Sneha Nair,General Practitioner,Dementia,Osteoporosis,Hearing Loss,4.0,1
+Dr. Amrita Mehta,Physiotherapist,Epilepsy,Hypertension,Asthma,4.1,0
+Dr. Ajay Patel,General Practitioner,Hearing Loss,Asthma,Diabetes,4.1,0
+Dr. Lakshmi Khan,Nurse,Glaucoma,Parkinson's,Arthritis,4.1,1
+Dr. Arjun Mishra,Physiotherapist,Hearing Loss,Respiratory Issues,Urinary Incontinence,4.7,1
+Dr. Ajay Patel,General Practitioner,Chronic Pain,Hypertension,Dementia,4.1,1
+Dr. Ishani Desai,Geriatric Specialist,Diabetes,Heart Disease,Chronic Pain,4.0,1
+Dr. Meera Sinha,General Practitioner,Cataracts,Osteoporosis,Dementia,4.9,1
+Dr. Meera Sinha,Nutritionist,Dementia,Osteoporosis,Depression,4.1,1
+Dr. Aravind Iyer,General Practitioner,Cataracts,Arthritis,Dementia,4.6,0
+Dr. Ananya Reddy,General Practitioner,Hypertension,Hearing Loss,Arthritis,5.0,1
+Dr. Diya Chopra,Physiotherapist,Respiratory Issues,Dementia,Chronic Pain,4.0,1
+Dr. Aravind Reddy,Nutritionist,Chronic Pain,Dementia,Obesity,4.3,0
+Dr. Diya Joshi,General Practitioner,Heart Disease,Parkinson's,Glaucoma,3.7,1
+Dr. Priya Mishra,Nutritionist,Arthritis,Heart Disease,Stroke,4.2,0
+Dr. Vivaan Rao,Geriatric Specialist,Diabetes,COPD,Heart Disease,3.6,0
+Dr. Vivaan Verma,Physiotherapist,Glaucoma,Cataracts,Epilepsy,4.6,1
+Dr. Diya Chopra,Physiotherapist,Parkinson's,Arthritis,Hypertension,3.2,0
+Dr. Nikhil Khan,Nurse,Hypertension,Osteoporosis,Arthritis,4.2,0
+Dr. Arjun Patel,Nurse,Chronic Pain,Dementia,Diabetes,4.7,1
+Dr. Meera Sinha,General Practitioner,Dementia,Cataracts,Osteoporosis,4.9,1
+Dr. Tanvi Reddy,Geriatric Specialist,Dementia,Arthritis,Diabetes,4.3,0
+Dr. Vihaan Agarwal,General Practitioner,Chronic Pain,Urinary Incontinence,Dementia,3.5,1
+Dr. Ananya Iyer,Geriatric Specialist,Epilepsy,Asthma,Obesity,4.7,1
+Dr. Sneha Pandey,Nutritionist,Heart Disease,Osteoporosis,Respiratory Issues,4.9,1
+Dr. Gaurav Choudhary,Nurse,Heart Disease,Chronic Pain,Depression,3.7,1
+Dr. Tanvi Reddy,Geriatric Specialist,Depression,Osteoporosis,Parkinson's,4.3,1
+Dr. Nikhil Khan,General Practitioner,Heart Disease,Respiratory Issues,Stroke,4.5,1
+Dr. Vikas Jain,Nurse,Glaucoma,Osteoporosis,Chronic Pain,3.8,1
+Dr. Manish Nair,General Practitioner,Arthritis,Stroke,Epilepsy,4.9,0
+Dr. Diya Sharma,Nutritionist,Arthritis,Osteoporosis,Cataracts,4.3,0
+Dr. Vivaan Bhatia,Physiotherapist,Hypertension,Obesity,Hearing Loss,3.6,0
+Dr. Meera Kapoor,Nutritionist,Glaucoma,Asthma,Stroke,3.9,0
+Dr. Aravind Choudhary,General Practitioner,Stroke,Obesity,Hypertension,4.7,0
+Dr. Kiran Rao,Nurse,Glaucoma,Parkinson's,Urinary Incontinence,3.3,0
+Dr. Amrita Thakur,Physiotherapist,Arthritis,Osteoporosis,Heart Disease,3.6,0
+Dr. Sai Kapoor,Nurse,Depression,Chronic Pain,Cataracts,4.2,1
+Dr. Sneha Desai,Geriatric Specialist,Arthritis,Stroke,Cataracts,3.8,0
+Dr. Aditya Khan,General Practitioner,Diabetes,Glaucoma,Chronic Pain,3.8,0
+Dr. Vivaan Verma,Physiotherapist,Hearing Loss,Arthritis,Heart Disease,4.7,1
+Dr. Tanvi Choudhary,Nurse,Hearing Loss,Cataracts,Osteoporosis,3.6,1
+Dr. Ishani Desai,General Practitioner,Urinary Incontinence,Hypertension,Glaucoma,4.5,1
+Dr. Sneha Pandey,Nutritionist,Arthritis,Urinary Incontinence,Hearing Loss,3.6,0
+Dr. Aarav Sharma,Nutritionist,Depression,Parkinson's,Respiratory Issues,3.1,0
+Dr. Nikhil Gupta,General Practitioner,Obesity,Hearing Loss,Dementia,4.5,0
+Dr. Kiran Verma,Geriatric Specialist,Hearing Loss,Cataracts,Epilepsy,4.9,0
+Dr. Vivaan Verma,Physiotherapist,Cataracts,Epilepsy,Glaucoma,4.6,1
+Dr. Aditya Gupta,Physiotherapist,Hypertension,Dementia,Heart Disease,4.4,1
+Dr. Vihaan Agarwal,Geriatric Specialist,Hypertension,Respiratory Issues,Urinary Incontinence,4.1,0
+Dr. Jyoti Nair,Geriatric Specialist,Osteoporosis,Glaucoma,Arthritis,4.8,1
+Dr. Sneha Desai,Geriatric Specialist,Osteoporosis,Hypertension,Respiratory Issues,4.2,1
+Dr. Ishani Pandey,Nutritionist,Obesity,Epilepsy,Stroke,4.5,0
+Dr. Ananya Choudhary,Geriatric Specialist,Arthritis,Glaucoma,Hypertension,3.6,1
+Dr. Aditi Sinha,Nutritionist,Osteoporosis,Chronic Pain,Dementia,4.5,0
+Dr. Vihaan Thakur,Nurse,Hypertension,Cataracts,Chronic Pain,4.0,1
+Dr. Gaurav Choudhary,Nutritionist,Chronic Pain,Epilepsy,Hypertension,4.1,0
+Dr. Aarav Sharma,Nutritionist,Asthma,Hypertension,Arthritis,4.8,1
+Dr. Vivaan Verma,Physiotherapist,Cataracts,Glaucoma,Epilepsy,4.6,1
+Dr. Vivaan Verma,Physiotherapist,Epilepsy,Glaucoma,Cataracts,4.6,1
+Dr. Sneha Pandey,Nurse,Osteoporosis,Arthritis,Parkinson's,3.9,1
+Dr. Rohan Agarwal,Nurse,Hypertension,Cataracts,Hearing Loss,3.9,1
+Dr. Sai Singh,Physiotherapist,Respiratory Issues,Hypertension,Urinary Incontinence,3.9,1
+Dr. Ishani Nair,General Practitioner,Osteoporosis,COPD,Dementia,4.0,0
+Dr. Rajesh Joshi,Nurse,Hearing Loss,Hypertension,Parkinson's,3.6,1
+Dr. Kavya Rao,Geriatric Specialist,Dementia,Depression,Respiratory Issues,3.9,1
+Dr. Sneha Nair,Nurse,Obesity,Epilepsy,COPD,4.9,0
+Dr. Rajesh Chopra,Geriatric Specialist,Stroke,Arthritis,Cataracts,4.9,0
+Dr. Aarav Sharma,Nutritionist,Asthma,Arthritis,Hypertension,4.8,1
+Dr. Harsha Rao,Nurse,Heart Disease,Depression,Hearing Loss,3.9,1
+Dr. Diya Sharma,Nutritionist,Glaucoma,Hearing Loss,Diabetes,4.3,1
+Dr. Aditya Jain,General Practitioner,Parkinson's,Osteoporosis,Urinary Incontinence,3.7,1
+Dr. Sai Kapoor,Nurse,Arthritis,Hearing Loss,COPD,4.2,0
+Dr. Meera Singh,Nutritionist,Diabetes,Hypertension,Glaucoma,3.8,1
+Dr. Gaurav Reddy,Physiotherapist,Respiratory Issues,Depression,Parkinson's,4.4,1
+Dr. Gaurav Choudhary,Nutritionist,Parkinson's,Respiratory Issues,Stroke,4.1,1
+Dr. Pooja Mehta,General Practitioner,Hypertension,Parkinson's,Hearing Loss,4.0,1
+Dr. Sai Kapoor,Nurse,Cataracts,Dementia,Asthma,4.8,0
+Dr. Harsha Verma,Nutritionist,Parkinson's,Depression,Arthritis,3.7,1
+Dr. Rajesh Chopra,General Practitioner,Asthma,Hypertension,Hearing Loss,3.6,0
+Dr. Ritika Joshi,Physiotherapist,Epilepsy,Cataracts,Hearing Loss,4.8,0
+Dr. Meera Sinha,General Practitioner,Cataracts,Osteoporosis,Dementia,4.9,1
+Dr. Vihaan Mehta,Nurse,COPD,Hearing Loss,Obesity,4.5,0
+Dr. Ananya Reddy,General Practitioner,Hypertension,Asthma,Obesity,4.4,0
+Dr. Meera Singh,General Practitioner,Chronic Pain,Arthritis,Hearing Loss,4.2,0
+Dr. Ishani Nair,Physiotherapist,Glaucoma,Dementia,Heart Disease,4.3,0
+Dr. Arjun Patel,Nurse,Diabetes,Dementia,Chronic Pain,4.7,1
+Dr. Sai Kapoor,Nurse,Hearing Loss,Hypertension,Arthritis,4.2,0
+Dr. Aarav Sharma,Nutritionist,Hypertension,Asthma,Arthritis,4.8,1
+Dr. Vivaan Verma,Geriatric Specialist,Stroke,Heart Disease,Hearing Loss,4.1,0
+Dr. Vikas Gupta,General Practitioner,Chronic Pain,Urinary Incontinence,Cataracts,3.9,1
+Dr. Rajesh Joshi,Nutritionist,Asthma,Obesity,Glaucoma,3.9,0
+Dr. Arjun Malhotra,Geriatric Specialist,Arthritis,Respiratory Issues,Parkinson's,4.0,1
+Dr. Meera Singh,General Practitioner,Dementia,Respiratory Issues,Stroke,4.2,1
+Dr. Arjun Mishra,Physiotherapist,Asthma,Glaucoma,Hypertension,4.7,0
+Dr. Ananya Choudhary,Nurse,Parkinson's,Dementia,Cataracts,4.6,1
+Dr. Rajesh Joshi,Nurse,Urinary Incontinence,Parkinson's,Glaucoma,4.2,0
+Dr. Vikas Gupta,Physiotherapist,Hypertension,Osteoporosis,Diabetes,4.4,0
+Dr. Aravind Iyer,Nurse,Urinary Incontinence,Glaucoma,Respiratory Issues,4.4,0
+Dr. Kavya Rao,Geriatric Specialist,Cataracts,Urinary Incontinence,Glaucoma,3.8,0
+Dr. Ritika Chopra,Nutritionist,Asthma,Glaucoma,Hearing Loss,3.7,0
+Dr. Neha Singh,Nutritionist,Arthritis,Diabetes,Dementia,4.1,0
+Dr. Tanvi Reddy,Nurse,Stroke,Parkinson's,Glaucoma,4.8,1
+Dr. Harsha Rao,Physiotherapist,Hypertension,Chronic Pain,Asthma,3.6,0
+Dr. Ananya Reddy,Geriatric Specialist,Depression,Chronic Pain,Osteoporosis,4.3,0
+Dr. Sai Sinha,Nurse,Epilepsy,Cataracts,Asthma,3.5,0
+Dr. Meera Sinha,General Practitioner,Osteoporosis,Dementia,Cataracts,4.9,1
+Dr. Arjun Patel,Geriatric Specialist,Chronic Pain,Stroke,Glaucoma,4.7,1
+Dr. Ritika Chopra,General Practitioner,Depression,Osteoporosis,Arthritis,3.7,0
+Dr. Neha Kapoor,Nurse,Glaucoma,Cataracts,Respiratory Issues,4.0,1
+Dr. Lakshmi Gupta,General Practitioner,COPD,Diabetes,Chronic Pain,4.4,0
+Dr. Lakshmi Jain,General Practitioner,Stroke,Hypertension,Arthritis,4.4,0
+Dr. Vihaan Thakur,Nurse,Diabetes,Epilepsy,Asthma,4.5,0
+Dr. Nikhil Jain,Geriatric Specialist,Diabetes,Obesity,Heart Disease,4.3,0
+Dr. Vikas Khan,General Practitioner,Depression,Dementia,Respiratory Issues,3.5,1
+Dr. Jyoti Desai,Nutritionist,Hypertension,COPD,Obesity,4.2,0
+Dr. Manish Pandey,Nurse,Parkinson's,Arthritis,Urinary Incontinence,3.8,0
+Dr. Aditi Sinha,Nurse,Dementia,Chronic Pain,Arthritis,4.2,1
+Dr. Rajesh Chopra,Geriatric Specialist,Heart Disease,Dementia,Parkinson's,4.9,1
+Dr. Lakshmi Khan,Nurse,Dementia,Stroke,Diabetes,4.1,0
+Dr. Aarav Sharma,Nutritionist,Diabetes,Chronic Pain,Parkinson's,4.3,1
+Dr. Lakshmi Jain,Physiotherapist,Urinary Incontinence,Glaucoma,Heart Disease,3.6,1
+Dr. Vihaan Mehta,Physiotherapist,Glaucoma,Hearing Loss,Parkinson's,3.5,0
+Dr. Manish Nair,General Practitioner,Glaucoma,Chronic Pain,Parkinson's,4.9,1
+Dr. Aditya Khan,General Practitioner,Osteoporosis,Parkinson's,Hearing Loss,3.8,1
+Dr. Amrita Agarwal,Nurse,Cataracts,Hearing Loss,Osteoporosis,4.2,1
+Dr. Ananya Iyer,Geriatric Specialist,Obesity,Epilepsy,Asthma,4.7,1
+Dr. Vihaan Agarwal,General Practitioner,Osteoporosis,Cataracts,Hearing Loss,3.5,0
+Dr. Lakshmi Gupta,Geriatric Specialist,Osteoporosis,Asthma,Dementia,4.0,0
+Dr. Pooja Thakur,Nutritionist,Heart Disease,Asthma,Stroke,4.0,0
+Dr. Vivaan Verma,Physiotherapist,Glaucoma,Epilepsy,Cataracts,4.6,1
+Dr. Aarav Sharma,Nutritionist,Arthritis,Hypertension,Asthma,4.8,1
+Dr. Aditi Singh,Physiotherapist,Arthritis,Osteoporosis,Cataracts,4.3,1
+Dr. Ajay Mishra,Geriatric Specialist,Depression,Stroke,Glaucoma,4.9,1
+Dr. Aarav Joshi,Physiotherapist,Dementia,Diabetes,Parkinson's,4.4,1
+Dr. Vikas Jain,Nurse,Arthritis,Heart Disease,Parkinson's,3.8,0
+Dr. Gaurav Iyer,Nutritionist,Urinary Incontinence,Parkinson's,Diabetes,4.4,1
+Dr. Meera Sinha,General Practitioner,Osteoporosis,Dementia,Cataracts,4.9,1
+Dr. Vikas Jain,Nurse,Hearing Loss,Depression,Cataracts,4.8,1
+Dr. Neha Kapoor,Physiotherapist,Hypertension,Osteoporosis,Glaucoma,4.1,0
+Dr. Ritika Sharma,General Practitioner,Glaucoma,COPD,Chronic Pain,3.6,0
+Dr. Vivaan Verma,Physiotherapist,Diabetes,Epilepsy,Glaucoma,4.7,0
+Dr. Siddharth Mishra,Geriatric Specialist,Osteoporosis,Epilepsy,Hearing Loss,3.6,0
+Dr. Rohan Mehta,General Practitioner,Parkinson's,Hypertension,Urinary Incontinence,3.9,1
+Dr. Aarav Sharma,Nutritionist,Hypertension,Asthma,Arthritis,4.8,1
+Dr. Neha Kapoor,Nurse,Hypertension,Arthritis,Stroke,4.0,0
+Dr. Diya Joshi,Nurse,Cataracts,Diabetes,Heart Disease,4.3,0
+Dr. Siddharth Patel,Nutritionist,Hypertension,Diabetes,Epilepsy,4.7,0
+Dr. Kavya Verma,Nutritionist,Epilepsy,Cataracts,COPD,4.9,0
+Dr. Tanvi Iyer,Physiotherapist,Hypertension,Arthritis,Stroke,4.5,1
+Dr. Aditya Gupta,Physiotherapist,Chronic Pain,Obesity,Diabetes,4.3,0
+Dr. Kavya Verma,Geriatric Specialist,Heart Disease,Stroke,Urinary Incontinence,3.9,1
+Dr. Neha Sinha,Physiotherapist,Arthritis,Glaucoma,Diabetes,3.5,1
+Dr. Arjun Patel,Nurse,Dementia,Chronic Pain,Diabetes,4.7,1
+Dr. Manish Pandey,Nurse,Epilepsy,Heart Disease,Cataracts,4.5,0
+Dr. Jyoti Pandey,General Practitioner,Arthritis,Hearing Loss,Dementia,4.0,0
+Dr. Ajay Patel,Geriatric Specialist,Stroke,Asthma,Hypertension,4.6,0
+Dr. Aravind Choudhary,Nutritionist,Stroke,Arthritis,Heart Disease,3.3,0
+Dr. Ananya Iyer,Physiotherapist,Asthma,Epilepsy,Hearing Loss,3.5,0
+Dr. Ananya Iyer,Geriatric Specialist,Epilepsy,Asthma,Obesity,4.7,1
+Dr. Arjun Malhotra,Geriatric Specialist,Osteoporosis,Diabetes,Hearing Loss,3.5,0
+Dr. Ritika Chopra,General Practitioner,Osteoporosis,Epilepsy,Stroke,4.8,0
+Dr. Amrita Thakur,Physiotherapist,Chronic Pain,Cataracts,Epilepsy,4.3,0
+Dr. Aditi Kapoor,Nurse,Obesity,Dementia,Osteoporosis,3.8,0
+Dr. Manish Nair,General Practitioner,Diabetes,Respiratory Issues,Cataracts,3.8,0
+Dr. Ananya Iyer,Geriatric Specialist,Obesity,Asthma,Epilepsy,4.7,1
+Dr. Vihaan Mehta,Physiotherapist,Asthma,Diabetes,Hypertension,3.5,0
+Dr. Tanvi Reddy,Nurse,COPD,Dementia,Asthma,4.8,0
+Dr. Ishani Desai,General Practitioner,Diabetes,Osteoporosis,Stroke,4.5,0
+Dr. Meera Sinha,General Practitioner,Dementia,Glaucoma,Depression,4.9,1
+Dr. Rajesh Sharma,Nurse,Stroke,Hearing Loss,Parkinson's,4.1,1
+Dr. Aditi Sinha,Nutritionist,Diabetes,Hypertension,Depression,4.1,0
+Dr. Aarav Chopra,Geriatric Specialist,Hypertension,Hearing Loss,Glaucoma,4.2,1
+Dr. Priya Patel,Geriatric Specialist,Urinary Incontinence,Depression,Osteoporosis,4.5,1
+Dr. Ishani Pandey,Nutritionist,Urinary Incontinence,Glaucoma,Chronic Pain,4.5,1
+Dr. Jyoti Desai,Nutritionist,Respiratory Issues,Glaucoma,Hearing Loss,4.2,1
+Dr. Rohan Mehta,Nutritionist,Heart Disease,Arthritis,Diabetes,4.2,1
+Dr. Arjun Patel,Nurse,Stroke,Glaucoma,Cataracts,3.7,1
+Dr. Jyoti Pandey,Nutritionist,Hypertension,Diabetes,Chronic Pain,4.1,0
+Dr. Ajay Mishra,Geriatric Specialist,Diabetes,Dementia,Heart Disease,4.3,0
+Dr. Aravind Reddy,Nutritionist,Osteoporosis,Arthritis,Heart Disease,4.3,1
+Dr. Aditya Gupta,Geriatric Specialist,Epilepsy,Arthritis,Heart Disease,4.2,0
+Dr. Vikas Khan,General Practitioner,Hearing Loss,Cataracts,Obesity,3.5,0
+Dr. Siddharth Patel,Nutritionist,Stroke,Heart Disease,Depression,4.4,0
+Dr. Pooja Agarwal,Nurse,Osteoporosis,Dementia,Epilepsy,4.1,0
+Dr. Sai Sinha,Nurse,Arthritis,Urinary Incontinence,Respiratory Issues,3.5,1
+Dr. Aditi Kapoor,Nurse,Heart Disease,Depression,Hearing Loss,3.8,1
+Dr. Priya Malhotra,General Practitioner,Urinary Incontinence,Dementia,Cataracts,3.8,1
+Dr. Vikas Gupta,Physiotherapist,Urinary Incontinence,Arthritis,Hypertension,4.3,0
+Dr. Gaurav Iyer,Nutritionist,COPD,Epilepsy,Heart Disease,4.4,0
+Dr. Nikhil Khan,Nurse,Asthma,Heart Disease,Arthritis,5.0,0
+Dr. Ritika Sharma,Physiotherapist,Hearing Loss,Hypertension,Urinary Incontinence,3.7,1
+Dr. Priya Patel,Physiotherapist,Heart Disease,Osteoporosis,COPD,3.6,0
+Dr. Meera Sinha,Nutritionist,Chronic Pain,Asthma,Obesity,4.1,0
+Dr. Pooja Thakur,Geriatric Specialist,Respiratory Issues,Arthritis,Urinary Incontinence,3.6,1
+Dr. Harsha Rao,Nurse,Hypertension,Epilepsy,Arthritis,3.9,0
+Dr. Meera Sinha,General Practitioner,Cataracts,Heart Disease,Hearing Loss,4.1,0
+Dr. Siddharth Patel,Nurse,Heart Disease,Glaucoma,Arthritis,4.9,0
+Dr. Sai Singh,Nurse,Dementia,Parkinson's,Stroke,4.1,1
+Dr. Aditya Jain,General Practitioner,Heart Disease,Parkinson's,Hearing Loss,3.5,0
+Dr. Ajay Malhotra,General Practitioner,Epilepsy,Hypertension,Cataracts,4.5,0
+Dr. Harsha Verma,Nutritionist,Parkinson's,Diabetes,Hypertension,3.1,0
+Dr. Amrita Agarwal,General Practitioner,Osteoporosis,Heart Disease,Diabetes,5.0,1
+Dr. Kiran Verma,Geriatric Specialist,Osteoporosis,Urinary Incontinence,Heart Disease,4.5,0
+Dr. Diya Chopra,Nurse,Cataracts,COPD,Asthma,4.6,0
+Dr. Sai Singh,Physiotherapist,Hearing Loss,Urinary Incontinence,Respiratory Issues,3.2,0
+Dr. Aravind Choudhary,Nutritionist,Diabetes,Osteoporosis,Chronic Pain,4.4,0
+Dr. Ritika Chopra,General Practitioner,Glaucoma,Dementia,Urinary Incontinence,4.8,1
+Dr. Siddharth Mishra,Geriatric Specialist,Arthritis,Hypertension,Diabetes,3.6,1
+Dr. Arjun Patel,Nurse,Chronic Pain,Dementia,Diabetes,4.7,1
+Dr. Ajay Malhotra,General Practitioner,Heart Disease,Cataracts,Hypertension,5.0,1
+Dr. Nikhil Gupta,Nutritionist,Heart Disease,Hearing Loss,Chronic Pain,4.3,0
+Dr. Aravind Iyer,General Practitioner,Heart Disease,Parkinson's,Osteoporosis,4.6,1
+Dr. Rohan Mehta,Nutritionist,Dementia,Hearing Loss,Osteoporosis,4.2,0
+Dr. Rajesh Joshi,Nutritionist,Heart Disease,Arthritis,Dementia,3.9,1
+Dr. Aditi Singh,Nurse,Osteoporosis,Stroke,COPD,4.2,0
+Dr. Lakshmi Khan,Nutritionist,Parkinson's,Osteoporosis,Cataracts,4.0,1
+Dr. Neha Singh,Physiotherapist,Depression,Glaucoma,Respiratory Issues,3.7,1
+Dr. Pooja Mehta,Nutritionist,Depression,Arthritis,Osteoporosis,3.7,1
+Dr. Kiran Rao,Nurse,Arthritis,Glaucoma,Hearing Loss,3.8,0
+Dr. Kiran Verma,Geriatric Specialist,Osteoporosis,Obesity,Asthma,3.9,0
+Dr. Aditi Singh,Nurse,Hearing Loss,Glaucoma,Parkinson's,4.2,1
+Dr. Sneha Desai,Geriatric Specialist,Cataracts,Arthritis,Diabetes,4.2,0
+Dr. Arjun Patel,Physiotherapist,Depression,Chronic Pain,Osteoporosis,4.1,1
+Dr. Vihaan Mehta,Nurse,Osteoporosis,Arthritis,Diabetes,4.5,1
+Dr. Aditi Singh,Physiotherapist,COPD,Dementia,Obesity,4.3,0
+Dr. Vihaan Mehta,Physiotherapist,Asthma,Arthritis,Heart Disease,4.0,0
+Dr. Meera Sinha,General Practitioner,Stroke,Epilepsy,Hypertension,4.9,0
+Dr. Ishani Desai,General Practitioner,Obesity,Cataracts,Asthma,4.5,0
+Dr. Aarav Sharma,Nutritionist,Asthma,Hypertension,Arthritis,4.8,1
+Dr. Ananya Iyer,Geriatric Specialist,Asthma,Obesity,Epilepsy,4.7,1
+Dr. Priya Patel,Physiotherapist,Hypertension,Depression,Stroke,3.6,1
+Dr. Priya Malhotra,General Practitioner,Stroke,Arthritis,Obesity,3.8,0
+Dr. Ananya Iyer,Geriatric Specialist,Obesity,Asthma,Epilepsy,4.7,1
+Dr. Sneha Pandey,Nurse,Hearing Loss,Hypertension,Heart Disease,3.9,0
+Dr. Ritika Sharma,Physiotherapist,Diabetes,Dementia,COPD,3.7,0
+Dr. Rohan Thakur,Physiotherapist,Urinary Incontinence,Stroke,Hearing Loss,4.9,1
+Dr. Rohan Agarwal,General Practitioner,Hypertension,Chronic Pain,Glaucoma,3.9,0
+Dr. Meera Kapoor,General Practitioner,Arthritis,Urinary Incontinence,Parkinson's,3.8,1
+Dr. Siddharth Patel,Nurse,Dementia,Osteoporosis,Diabetes,4.9,1
+Dr. Manish Desai,Nurse,Heart Disease,Stroke,Epilepsy,5.0,0
+Dr. Nikhil Khan,Nurse,Glaucoma,Depression,Dementia,5.0,1
+Dr. Aravind Iyer,Nurse,Heart Disease,Arthritis,Chronic Pain,4.7,0
+Dr. Meera Singh,Nutritionist,Dementia,Arthritis,Obesity,3.8,0
+Dr. Kiran Bhatia,Nurse,Diabetes,Hypertension,Glaucoma,4.3,1
+Dr. Ananya Reddy,Geriatric Specialist,Asthma,Epilepsy,Chronic Pain,3.9,0
+Dr. Priya Malhotra,General Practitioner,Arthritis,Hearing Loss,Diabetes,3.1,0
+Dr. Sai Sinha,Physiotherapist,Dementia,Diabetes,Glaucoma,5.0,1
+Dr. Harsha Bhatia,Nutritionist,COPD,Diabetes,Dementia,4.3,0
+Dr. Aravind Reddy,Nurse,Hearing Loss,Stroke,Diabetes,3.7,0
+Dr. Kavya Bhatia,Nutritionist,Heart Disease,Hypertension,Cataracts,4.1,0
+Dr. Ritika Joshi,General Practitioner,Cataracts,Dementia,Heart Disease,4.4,1
+Dr. Aditya Gupta,Physiotherapist,Stroke,Urinary Incontinence,Parkinson's,4.3,1
+Dr. Nikhil Gupta,Nutritionist,Dementia,Depression,Diabetes,4.3,1
+Dr. Ishani Pandey,Nutritionist,Cataracts,Hypertension,Osteoporosis,3.7,1
+Dr. Ajay Patel,Geriatric Specialist,Arthritis,Hearing Loss,Dementia,4.6,1
+Dr. Sneha Nair,Nurse,Cataracts,Hypertension,Respiratory Issues,4.9,1
+Dr. Aarav Joshi,Nurse,Arthritis,Heart Disease,Cataracts,4.5,0
+Dr. Ananya Iyer,Nutritionist,Dementia,Osteoporosis,Hypertension,4.3,1
+Dr. Amrita Agarwal,Nurse,Asthma,Stroke,Glaucoma,4.2,0
+Dr. Ananya Choudhary,Nurse,Epilepsy,Diabetes,Hearing Loss,4.6,0
+Dr. Diya Sharma,Physiotherapist,Heart Disease,Stroke,COPD,3.9,0
+Dr. Kiran Rao,Nutritionist,Diabetes,Asthma,Heart Disease,4.0,0
+Dr. Ishani Nair,Nutritionist,Obesity,Stroke,COPD,4.2,0
+Dr. Nikhil Jain,Geriatric Specialist,Hypertension,Dementia,Parkinson's,4.3,1
+Dr. Ajay Mishra,Geriatric Specialist,Heart Disease,Obesity,Epilepsy,4.9,0
+Dr. Priya Patel,Geriatric Specialist,Chronic Pain,Dementia,Cataracts,4.5,0
+Dr. Meera Kapoor,General Practitioner,Obesity,Heart Disease,Cataracts,3.8,0
+Dr. Tanvi Reddy,Geriatric Specialist,Diabetes,Stroke,Cataracts,3.6,0
+Dr. Sneha Nair,General Practitioner,Arthritis,Glaucoma,Heart Disease,4.0,0
+Dr. Diya Joshi,Nurse,Urinary Incontinence,Respiratory Issues,Arthritis,4.3,1
+Dr. Pooja Agarwal,General Practitioner,Hypertension,Cataracts,Urinary Incontinence,3.6,1
+Dr. Manish Desai,Physiotherapist,COPD,Hearing Loss,Asthma,4.8,0
+Dr. Rohan Agarwal,Nurse,Arthritis,Stroke,Dementia,3.9,0
+Dr. Vikas Khan,Nurse,Dementia,Obesity,Epilepsy,4.3,0
+Dr. Aarav Joshi,Physiotherapist,Arthritis,Hearing Loss,Stroke,4.4,0
+Dr. Neha Singh,Nutritionist,Diabetes,Osteoporosis,Cataracts,3.9,1
+Dr. Ananya Reddy,General Practitioner,Diabetes,Osteoporosis,Hearing Loss,4.4,1
+Dr. Arjun Patel,Geriatric Specialist,COPD,Hypertension,Epilepsy,4.7,0
+Dr. Harsha Bhatia,Nutritionist,Hypertension,Cataracts,Parkinson's,4.3,1
+Dr. Arjun Patel,Nurse,Chronic Pain,Arthritis,Obesity,3.7,0
+Dr. Rohan Thakur,Nutritionist,Hearing Loss,Parkinson's,Chronic Pain,4.7,1
+Dr. Manish Nair,General Practitioner,Chronic Pain,Osteoporosis,Heart Disease,3.8,1
+Dr. Lakshmi Khan,Nurse,Heart Disease,Hearing Loss,Arthritis,3.7,0
+Dr. Vikas Jain,Nurse,Obesity,Glaucoma,Osteoporosis,4.8,0
+Dr. Aditya Khan,Nurse,Glaucoma,Hypertension,Obesity,3.6,0
+Dr. Aarav Sharma,Nutritionist,Glaucoma,Dementia,Cataracts,4.3,0
+Dr. Vihaan Thakur,Nurse,Respiratory Issues,Chronic Pain,Cataracts,4.5,1
+Dr. Kiran Verma,Geriatric Specialist,Arthritis,Hypertension,Diabetes,4.9,1
+Dr. Vivaan Bhatia,Nutritionist,COPD,Osteoporosis,Asthma,3.9,0
+Dr. Siddharth Mishra,Geriatric Specialist,Heart Disease,Hearing Loss,Cataracts,4.9,1
+Dr. Aditya Khan,Nurse,Arthritis,Osteoporosis,Stroke,3.6,1
+Dr. Neha Sinha,Physiotherapist,Osteoporosis,Arthritis,Diabetes,4.8,1
+Dr. Sneha Desai,Geriatric Specialist,Diabetes,Hypertension,Epilepsy,4.3,0
+Dr. Aarav Sharma,Nutritionist,Hypertension,Arthritis,Asthma,4.8,1
+Dr. Neha Sinha,Physiotherapist,COPD,Asthma,Chronic Pain,3.5,0
+Dr. Ritika Sharma,General Practitioner,Diabetes,Stroke,Dementia,3.6,1
+Dr. Diya Chopra,Nurse,Urinary Incontinence,Parkinson's,Hearing Loss,4.6,1
+Dr. Rohan Thakur,Physiotherapist,Asthma,Arthritis,Chronic Pain,4.9,0
+Dr. Ajay Patel,Geriatric Specialist,Dementia,Parkinson's,Cataracts,3.1,0
+Dr. Diya Sharma,Physiotherapist,Diabetes,Parkinson's,Glaucoma,3.9,1
+Dr. Arjun Patel,Nurse,Diabetes,Dementia,Chronic Pain,4.7,1
+Dr. Vikas Khan,Nurse,Hypertension,Stroke,Heart Disease,4.3,1
+Dr. Vivaan Bhatia,Nutritionist,Heart Disease,Glaucoma,Hearing Loss,3.9,1
+Dr. Siddharth Malhotra,Nutritionist,Cataracts,Parkinson's,Hypertension,3.9,1
+Dr. Siddharth Mishra,Geriatric Specialist,Hypertension,Arthritis,Hearing Loss,4.5,0
+Dr. Manish Pandey,Physiotherapist,Heart Disease,Diabetes,Osteoporosis,4.8,1
+Dr. Kavya Rao,Geriatric Specialist,Hearing Loss,Epilepsy,Arthritis,4.7,0
+Dr. Arjun Malhotra,Nutritionist,Diabetes,Arthritis,Dementia,3.5,1
+Dr. Aarav Chopra,Geriatric Specialist,Asthma,Stroke,Cataracts,4.2,0
+Dr. Kiran Bhatia,Nurse,Dementia,Chronic Pain,Stroke,4.3,0
+Dr. Ritika Joshi,Physiotherapist,Heart Disease,Dementia,Glaucoma,4.8,1
+Dr. Kiran Rao,Nurse,Dementia,Respiratory Issues,Hypertension,3.8,1
+Dr. Aditi Sinha,Nurse,COPD,Osteoporosis,Epilepsy,4.2,0
+Dr. Sai Singh,Nurse,Cataracts,Heart Disease,Arthritis,4.1,0
+Dr. Lakshmi Gupta,General Practitioner,Hypertension,Hearing Loss,Dementia,4.4,1
+Dr. Gaurav Reddy,General Practitioner,Glaucoma,Urinary Incontinence,Hearing Loss,4.1,0
+Dr. Pooja Agarwal,Nurse,Cataracts,Chronic Pain,Hearing Loss,4.1,1
+Dr. Ananya Iyer,Geriatric Specialist,Asthma,Obesity,Epilepsy,4.7,1
+Dr. Siddharth Malhotra,Nutritionist,COPD,Heart Disease,Epilepsy,3.9,0
+Dr. Aarav Sharma,Nutritionist,Arthritis,Asthma,Hypertension,4.8,1
+Dr. Harsha Verma,Nutritionist,Respiratory Issues,Stroke,Chronic Pain,3.9,1
+Dr. Manish Desai,Physiotherapist,Urinary Incontinence,Parkinson's,Chronic Pain,4.8,1
+Dr. Sai Singh,Physiotherapist,Cataracts,Heart Disease,Stroke,4.2,0
+Dr. Pooja Mehta,Nutritionist,Hypertension,Diabetes,Heart Disease,3.7,0
+Dr. Lakshmi Jain,Physiotherapist,Cataracts,Arthritis,Diabetes,3.6,0
+Dr. Aditi Singh,Physiotherapist,Stroke,Parkinson's,Arthritis,3.0,0
+Dr. Aravind Choudhary,Nutritionist,Hypertension,Dementia,Hearing Loss,4.4,1
+Dr. Harsha Bhatia,Nurse,Heart Disease,Stroke,Arthritis,3.8,1
+Dr. Ananya Choudhary,Geriatric Specialist,Asthma,Osteoporosis,COPD,3.6,0
+Dr. Siddharth Patel,Nutritionist,Glaucoma,Heart Disease,Chronic Pain,4.7,1
+Dr. Vivaan Verma,Physiotherapist,Epilepsy,Cataracts,Glaucoma,4.6,1
+Dr. Manish Desai,Nurse,Hearing Loss,Glaucoma,Osteoporosis,5.0,1
+Dr. Amrita Thakur,Physiotherapist,Respiratory Issues,Arthritis,Osteoporosis,4.3,1
+Dr. Kiran Rao,Nutritionist,Glaucoma,Parkinson's,Cataracts,4.0,1
+Dr. Jyoti Desai,Nurse,Stroke,Depression,Chronic Pain,4.1,1
+Dr. Aditya Jain,Physiotherapist,Asthma,Chronic Pain,Stroke,4.4,0
+Dr. Manish Nair,General Practitioner,Obesity,Diabetes,Arthritis,3.8,0
+Dr. Rohan Thakur,Nutritionist,Obesity,Asthma,Epilepsy,4.7,0
+Dr. Siddharth Malhotra,General Practitioner,Arthritis,Hypertension,Hearing Loss,5.0,1
+Dr. Ananya Iyer,Geriatric Specialist,Epilepsy,Asthma,Obesity,4.7,1
+Dr. Aditi Kapoor,Nurse,Arthritis,Hypertension,Dementia,4.0,1
+Dr. Rajesh Sharma,Nurse,COPD,Osteoporosis,Cataracts,4.1,0
+Dr. Kiran Bhatia,Physiotherapist,Stroke,Asthma,Cataracts,4.0,0
+Dr. Aditi Kapoor,Nurse,Epilepsy,Cataracts,Heart Disease,4.0,0
+Dr. Gaurav Iyer,Physiotherapist,Heart Disease,Osteoporosis,Diabetes,4.9,0
+Dr. Vivaan Verma,Physiotherapist,Arthritis,Hearing Loss,Epilepsy,4.0,0
+Dr. Aarav Sharma,Physiotherapist,Hypertension,Hearing Loss,Cataracts,4.3,0
+Dr. Vikas Gupta,Physiotherapist,Stroke,Dementia,Chronic Pain,4.4,1
+Dr. Vivaan Verma,Physiotherapist,Cataracts,Epilepsy,Glaucoma,4.6,1
+Dr. Neha Singh,Physiotherapist,Arthritis,Obesity,Chronic Pain,3.7,0
+Dr. Aravind Iyer,Nurse,Cataracts,Glaucoma,Hypertension,4.7,1
+Dr. Nikhil Jain,Physiotherapist,Parkinson's,Heart Disease,Chronic Pain,4.5,1
+Dr. Rajesh Sharma,Geriatric Specialist,Depression,Diabetes,Urinary Incontinence,4.1,1
+Dr. Meera Sinha,General Practitioner,Cataracts,Osteoporosis,Dementia,4.9,1
+Dr. Pooja Thakur,Geriatric Specialist,Dementia,Asthma,Diabetes,3.6,0
+Dr. Ananya Iyer,Nutritionist,Glaucoma,Obesity,Diabetes,4.3,0
+Dr. Rohan Agarwal,General Practitioner,Hearing Loss,COPD,Glaucoma,4.9,0
+Dr. Pooja Mehta,General Practitioner,Asthma,Glaucoma,Diabetes,4.0,0
+Dr. Vihaan Agarwal,Geriatric Specialist,Stroke,Heart Disease,Cataracts,4.7,0
+Dr. Nikhil Gupta,General Practitioner,Hypertension,Arthritis,Osteoporosis,4.5,1
+Dr. Tanvi Choudhary,Nutritionist,Chronic Pain,Arthritis,Diabetes,4.1,0
+Dr. Ishani Nair,Nutritionist,Osteoporosis,Diabetes,Chronic Pain,4.2,1
+Dr. Sai Sinha,Physiotherapist,Stroke,Hypertension,Chronic Pain,5.0,0

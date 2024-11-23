@@ -9,9 +9,8 @@ function Explore() {
   const { currentUser } = useSelector((state) => state.user);
   const [babysitters, setBabysitters] = useState([]);
   const [caretakers, setCaretakers] = useState([]);
-  const navigate = useNavigate(); // Navigation hook
+  const navigate = useNavigate(); 
 
-  // Function to load babysitters data from API
   const loadBabysittersData = async () => {
     try {
       let response = await fetch("/api/display/babysitter", {
@@ -109,22 +108,22 @@ function Explore() {
                     </p>
                   </div>
                   <div className="flex justify-end items-end mt-5">
-                  {currentUser ? (
-                    <button
-                      onClick={() => handleBooking(data, "babysitter")}
-                      className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
-                    >
-                      Book Now
-                    </button>
-                  ) : (
-                    <Link to="/sign-in">
+                    {currentUser ? (
                       <button
+                        onClick={() => handleBooking(data, "babysitter")}
                         className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
                       >
-                        View Details
+                        Book Now
                       </button>
-                    </Link>
-                  )}
+                    ) : (
+                      <Link to="/sign-in">
+                        <button
+                          className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+                        >
+                          View Details
+                        </button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
@@ -170,22 +169,22 @@ function Explore() {
                     </p>
                   </div>
                   <div className="flex justify-end items-end mt-5">
-                  {currentUser ? (
-                    <button
-                      onClick={() => handleBooking(data, "caretaker")}
-                      className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
-                    >
-                      Book Now
-                    </button>
-                  ) : (
-                    <Link to="/sign-in">
+                    {currentUser ? (
                       <button
+                        onClick={() => handleBooking(data, "caretaker")}
                         className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
                       >
-                        View Details
+                        Book Now
                       </button>
-                    </Link>
-                  )}
+                    ) : (
+                      <Link to="/sign-in">
+                        <button
+                          className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+                        >
+                          View Details
+                        </button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
@@ -193,6 +192,18 @@ function Explore() {
           ))}
         </div>
       </div>
+      <div className="flex justify-end items-end mt-5 mb-5">
+      <Link to="/indexMl">
+        <button
+          className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+        >
+          Recommendation
+        </button>
+      </Link>
+      </div>
+      <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/74a4beaa-b90d-4583-b003-a95cbabf0bdf">ChatBot</iframe>
+
+      
     </div>
   );
 }

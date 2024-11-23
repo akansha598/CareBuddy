@@ -13,6 +13,7 @@ import Contact from './pages/Contact.jsx';
 import Booking from './pages/Booking.jsx';
 import Payment from './pages/Payment.jsx';
 import MyBookings from './pages/MyBookings.jsx';
+import IndexMl from './pages/indexMl.jsx';
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
           <Route path='/booking' element={<Booking />} />
           <Route path='/payment' element={<Payment />} />
           <Route path='/myBookings' element={<MyBookings />} />
+          <Route path='/indexMl' element={<IndexMl/>} />
         </Routes>
       <Footer />
     </BrowserRouter>

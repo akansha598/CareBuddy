@@ -25,6 +25,7 @@ export default function Home() {
       <Products/>
       <Subscribe/>
       <Testimonials/>
+      <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/74a4beaa-b90d-4583-b003-a95cbabf0bdf">ChatBot</iframe>
     </div>
   )
 }
