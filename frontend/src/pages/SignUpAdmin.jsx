@@ -179,6 +179,21 @@ export default function SignUpAdmin() {
                             <input type="checkbox" id='privacy' />
                             <label className='text-sm'>I would like to receive communications from<br /> CareBuddy according to the Privacy Policy.**</label>
                         </div>
+                        <a
+                            href="https://resident.uidai.gov.in/check-aadhaar-validity/en"
+                            className='bg-gray-200 text-black text-lg outline rounded-full p-2 px-5 hover:bg-gray-300 text-center block'
+                        >
+                            Verification
+                        </a>
+                        <label className="bg-green-500 text-white text-lg outline rounded-full p-2 px-5 hover:text-white hover:bg-green-600 text-center cursor-pointer">
+                            Upload Verified Image
+                            <input
+                                type="file"
+                                accept="image/*"
+                                className="hidden"
+                            />
+                        </label>
+                        
 
                         <button type='submit' className='bg-[#6531e0] text-white text-lg outline rounded-full p-2 px-5 hover:text-white hover:bg-[#6531e0]'>
                             {loading ? 'Signing Up...' : 'Sign Up'}

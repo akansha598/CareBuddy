@@ -2,29 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 function MyBookings() {
-  const [bookings, setBookings] = useState([]); 
-  const [loading, setLoading] = useState(true); 
-  const [error, setError] = useState(null); 
+  const [bookings, setBookings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const { currentUser } = useSelector((state) => state.user);
-  //console.log(currentUser);
+  console.log("Current User:", currentUser);
 
   useEffect(() => {
     const loadBookings = async () => {
       if (!currentUser?.email) return;
-  
-      try {
-        //console.log(currentUser.email);
-        const response = await fetch(`/api/display/bookings?userEmail=${currentUser.email}`);
 
-        const data = await response.json();
-        console.log(data);
-  
+      try {
+        console.log("Fetching bookings for:", currentUser.email);
+        const response = await fetch(`/api/display/bookings?userEmail=${currentUser.email}`);
+        const Booking = await response.json();
+        console.log("API Response:", Booking);
+
         if (response.ok) {
-          setBookings(data.bookings || []); 
+          // Adjust based on actual response structure
+          setBookings(Booking.data || Booking || []);
         } else {
-          console.error('Response error:', data.error || response.status);
-          setError(data.error || 'Failed to fetch bookings');
+          console.error('Response error:', Booking.error || response.status);
+          setError(Booking.error || 'Failed to fetch bookings');
         }
       } catch (err) {
         console.error('Fetch error:', err);
@@ -33,42 +33,75 @@ function MyBookings() {
         setLoading(false);
       }
     };
-  
-    loadBookings();
-  }, [currentUser?.email]);  
 
+    loadBookings();
+  }, [currentUser?.email]);
+
+  useEffect(() => {
+    console.log("Updated Bookings:", bookings);
+  }, [bookings]);
+
+  if (loading) {
+    return <div className="text-center">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-red-500">{error}</div>;
+  }
+
+  if (bookings.length === 0) {
+    return <div className="text-center">No bookings found.</div>;
+  }
 
   return (
-    <div>
-      <h1>My Bookings</h1>
-      {bookings.length > 0 ? (
-        <ul>
-          {bookings.map((booking) => (
-            <li key={booking._id}>
-              <p>
-                <strong>Booking ID:</strong> {booking._id}
-              </p>
-              <p>
-                <strong>Babysitter Email:</strong> {booking.professionEmail}
-              </p>
-              <p>
-                <strong>Address:</strong> {booking.userAddress}
-              </p>
-              <p>
-                <strong>Status:</strong> {booking.status}
-              </p>
-              <p>
-                <strong>From:</strong> {new Date(booking.dateFrom).toLocaleDateString()}
-              </p>
-              <p>
-                <strong>To:</strong> {new Date(booking.dateTo).toLocaleDateString()}
-              </p>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No bookings found.</p>
-      )}
+    <div className="flex justify-center">
+      <div className="w-[1000px] items-center m-10">
+        {bookings.map((booking) => (
+          <div
+            key={booking._id}
+            className="w-full card p-5 border border-gray-300 rounded-lg bg-slate-100 mb-5"
+          >
+            <div className="flex flex-row justify-between items-start">
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold mb-5">Booking Details</h2>
+                <div className="flex flex-col justify-start items-start mb-5">
+                  <p>
+                    <strong>User Email:</strong> {booking.userEmail}
+                  </p>
+                  <p>
+                    <strong>Profession Email:</strong> {booking.professionEmail}
+                  </p>
+                  <p>
+                    <strong>User Address:</strong> {booking.userAddress}
+                  </p>
+                  <p>
+                    <strong>Date From:</strong> {new Date(booking.dateFrom).toLocaleDateString()}
+                  </p>
+                  <p>
+                    <strong>Date To:</strong> {new Date(booking.dateTo).toLocaleDateString()}
+                  </p>
+                  <p>
+                    <strong>Status:</strong>{' '}
+                    {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
+                  </p>
+                  <p>
+                    <strong>Special Requests:</strong>{' '}
+                    {booking.specialRequests || 'None'}
+                  </p>
+                </div>
+              </div>
+              <div className="w-[200px] flex flex-col justify-between mr-10">
+                <img
+                  className="img-fluid rounded-start border rounded-lg"
+                  style={{ height: '180px', width: '100%', objectFit: 'cover' }}
+                  src="https://passport-photo.online/images/cms/prepare_light_b364e3ec37.webp?quality=80&format=webp&width=1920"
+                  alt="User"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -76,13 +76,13 @@ export default function Header() {
         {currentUser ? (
           <Link to="/myBookings">
             <button className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white">
-              Booking
+              Bookings
             </button>
           </Link>
         ) : (
           <Link to="/sign-in">
             <button className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white">
-               Booking
+               Bookings
             </button>
           </Link>
         )}

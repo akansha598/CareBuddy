@@ -84,7 +84,7 @@ function Explore() {
                   <img
                     className="img-fluid rounded-start border rounded-lg"
                     style={{ height: "180px", width: "100%", objectFit: "cover" }}
-                    src="https://passport-photo.online/images/cms/prepare_light_b364e3ec37.webp?quality=80&format=webp&width=1920"
+                    src={data.profilePic}
                     alt="Card image cap"
                   />
                 </div>
@@ -145,7 +145,7 @@ function Explore() {
                   <img
                     className="img-fluid rounded-start border rounded-lg"
                     style={{ height: "180px", width: "100%", objectFit: "cover" }}
-                    src="https://passport-photo.online/images/cms/prepare_light_b364e3ec37.webp?quality=80&format=webp&width=1920"
+                    src={data.profilePic}
                     alt="Card image cap"
                   />
                 </div>
