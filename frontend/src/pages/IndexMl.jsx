@@ -41,7 +41,7 @@ const IndexMl = () => {
                 minHeight: '100vh', 
                 display: 'flex', 
                 justifyContent: 'center', 
-                alignItems: 'center', // Centering the content vertically and horizontally
+                alignItems: 'center', 
                 position: 'relative',
                 opacity: '0.7'
             }}

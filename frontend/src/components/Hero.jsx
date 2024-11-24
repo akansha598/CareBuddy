@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from 'react-router-dom';
 
 const BannerImg = {
   backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/regal-airway-426618-d0.appspot.com/o/file-upload%2FWhatsApp%20Image%202024-09-08%20at%2011.13.32%20PM.jpeg?alt=media&token=09d10bf4-0f45-42c9-a2af-94d8558df746')",
@@ -98,11 +99,12 @@ function Hero() {
                   {data.description}
                 </p>
                 <div className="flex justify-center">
-                  <button
-                    className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
-                  >
-                    Book Now
-                  </button>
+                  <Link to="/explore">
+                    <button className="text-white text-lg font-semibold rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white">
+                      Book now
+                    </button>
+
+                  </Link>
                 </div>
               </div>
             </div>

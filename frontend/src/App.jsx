@@ -14,6 +14,7 @@ import Booking from './pages/Booking.jsx';
 import Payment from './pages/Payment.jsx';
 import MyBookings from './pages/MyBookings.jsx';
 import IndexMl from './pages/indexMl.jsx';
+import ChatBot from './components/ChatBot.jsx';
 
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
           <Route path='/myBookings' element={<MyBookings />} />
           <Route path='/indexMl' element={<IndexMl/>} />
         </Routes>
+        <ChatBot/>
       <Footer />
     </BrowserRouter>
   )

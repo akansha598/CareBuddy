@@ -6,8 +6,10 @@ import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 
 function MyBookings() {
-  const [bookings, setBookings] = useState([]);
+  const [bookings, setBookings] = useState([]); // Previous bookings
+  const [displayBookings, setDisplayBookings] = useState([]); // New API bookings
   const [loading, setLoading] = useState(true);
+  const [loadingDisplay, setLoadingDisplay] = useState(true);
   const [error, setError] = useState(null);
 
   const { currentUser } = useSelector((state) => state.user);
@@ -24,7 +26,6 @@ function MyBookings() {
         console.log("API Response:", Booking);
 
         if (response.ok) {
-          // Adjust based on actual response structure
           const bookingData = Array.isArray(Booking) ? Booking : [Booking];
           setBookings(bookingData);
         } else {
@@ -43,8 +44,31 @@ function MyBookings() {
   }, [currentUser?.email]);
 
   useEffect(() => {
-    console.log("Updated Bookings:", bookings);
-  }, [bookings]);
+    const fetchBookings = async () => {
+      if (!currentUser?.email) return;
+
+      try {
+        console.log("Fetching bookings for:", currentUser.email);
+        const response = await fetch(`/api/display/bookings?userEmail=${currentUser.email}`);
+        const data = await response.json();
+        console.log("API Response for bookings:", data);
+
+        if (response.ok) {
+          setDisplayBookings(data);
+        } else {
+          console.error('Error fetching bookings:', response.statusText);
+          setError('Failed to fetch bookings.');
+        }
+      } catch (err) {
+        console.error('Error fetching bookings:', err);
+        setError('Something went wrong while fetching bookings.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBookings();
+  }, [currentUser?.email]);
 
   if (loading) {
     return <div className="text-center">Loading...</div>;
@@ -71,7 +95,7 @@ function MyBookings() {
                 <h2 className="text-3xl font-bold mb-5">Booking Details</h2>
                 <div className="flex flex-col justify-start items-start mb-5">
                   <p>
-                    <strong> Name:</strong> {booking.name}
+                    <strong>Name:</strong> {booking.name}
                   </p>
                   <p>
                     <strong>Profession Email:</strong> {booking.email}
@@ -91,17 +115,16 @@ function MyBookings() {
                   <p>
                     <strong>Profession:</strong> {booking.profession}
                   </p>
-                 <strong>
-                 Rating:<span className="text-yellow-500">
-                        {Array.from({ length: 5 }, (_, index) => (
-                          <FontAwesomeIcon
-                            key={index}
-                            icon={index < booking.rating ? faStar : faStarEmpty}
-                          />
-                        ))}
-                      </span>
+                  <strong>
+                    Rating:<span className="text-yellow-500">
+                      {Array.from({ length: 5 }, (_, index) => (
+                        <FontAwesomeIcon
+                          key={index}
+                          icon={index < booking.rating ? faStar : faStarEmpty}
+                        />
+                      ))}
+                    </span>
                   </strong>
-                      
                 </div>
               </div>
               <div className="w-[200px] flex flex-col justify-between mr-10">

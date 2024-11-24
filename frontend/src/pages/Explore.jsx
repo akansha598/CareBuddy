@@ -9,7 +9,7 @@ function Explore() {
   const { currentUser } = useSelector((state) => state.user);
   const [babysitters, setBabysitters] = useState([]);
   const [caretakers, setCaretakers] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const loadBabysittersData = async () => {
     try {
@@ -136,6 +136,15 @@ function Explore() {
         <h2 className="text-4xl font-bold flex flex-col items-center mt-3 text-white bg-black p-2 m-2">
           Care-Takers
         </h2>
+        <div className="flex justify-end items-end mt-5 mb-5 mr-5">
+          <Link to="/indexMl">
+            <button
+              className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+            >
+              Recommendation
+            </button>
+          </Link>
+        </div>
         <div className="flex flex-row flex-wrap justify-start m-5">
           {caretakers.map((data) => (
             <div className="w-[430px] card m-3 p-3 border border-gray-300 rounded-lg bg-slate-100 flex" key={data.id}>
@@ -192,18 +201,6 @@ function Explore() {
           ))}
         </div>
       </div>
-      <div className="flex justify-end items-end mt-5 mb-5">
-      <Link to="/indexMl">
-        <button
-          className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
-        >
-          Recommendation
-        </button>
-      </Link>
-      </div>
-      <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/74a4beaa-b90d-4583-b003-a95cbabf0bdf">ChatBot</iframe>
-
-      
     </div>
   );
 }

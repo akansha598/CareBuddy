@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -12,7 +12,9 @@ const BannerImg = {
 };
 
 export default function About() {
-  React.useEffect(() => {
+  const [showChatbot, setShowChatbot] = useState(false); // State to manage chatbot visibility
+
+  useEffect(() => {
     AOS.init({
       offset: 100,
       duration: 800,
@@ -25,20 +27,22 @@ export default function About() {
   return (
     <div>
       <div>
-        {/* First featurette aligned to the left */}
+        {/* First featurette */}
         <div>
           <div className="flex flex-row flex-wrap justify-start m-5">
-            {/* Text section starts at the top */}
-            <div className="col-md-7 order-md-1 text-start flex flex-col justify-start ">
+            <div className="col-md-7 order-md-1 text-start flex flex-col justify-start">
               <h2 className="text-4xl font-bold text-black p-3" data-aos="zoom-in">
-              Trusted Babysitters,{" "}
+                Trusted Babysitters,{" "}
                 <span className="text-muted text-gray-500">Caring for Your Child with Safety and Responsibility.</span>
               </h2>
               <p className="lead m-3">
-              A babysitter is a responsible caregiver who takes care of children in the absence of their parents, ensuring their safety and well-being. They engage children in various activities, help with homework, and maintain daily routines like meals and bedtime. Babysitters provide a nurturing and secure environment, catering to the unique needs of each child, whether it's for a few hours or an extended period. Trusted by parents, babysitters offer peace of mind by being dependable and attentive, making sure children feel comfortable and cared for while parents are away, allowing families to balance work, social, or personal commitments.              </p>
+                A babysitter is a responsible caregiver who takes care of children in the absence of their parents,
+                ensuring their safety and well-being. They engage children in various activities, help with homework,
+                and maintain daily routines like meals and bedtime. Babysitters provide a nurturing and secure
+                environment, catering to the unique needs of each child, whether it's for a few hours or an extended
+                period.
+              </p>
             </div>
-
-            {/* Image section aligned to the bottom */}
             <div className="col-md-5 order-md-2 w-2/3 flex flex-col justify-end p-2 m-3">
               <img
                 className="img-fluid rounded-start border rounded-lg"
@@ -50,24 +54,25 @@ export default function About() {
           </div>
         </div>
 
-
-
-        {/* Second featurette aligned to the right */}
+        {/* Second featurette */}
         <div className="row featurette d-flex justify-content-end align-items-end mt-10">
-          <div className=" text-end">
-            <h2 className="text-4xl font-bold m-3 " data-aos="zoom-in">
-            Compassionate Caretakers,{" "}
+          <div className="text-end">
+            <h2 className="text-4xl font-bold m-3" data-aos="zoom-in">
+              Compassionate Caretakers,{" "}
               <span className="text-muted text-gray-500">Ensuring Comfort and Dignity for Your Loved Ones</span>
             </h2>
             <div className="flex justify-end items-end ml-5">
               <p className="lead m-3">
-              A caretaker plays a vital role in providing compassionate support and care for those who need assistance, whether it's for the elderly, individuals with disabilities, or those recovering from illness. They ensure a safe and comfortable environment, assisting with daily tasks such as bathing, dressing, and medication management. Beyond physical care, caretakers offer emotional support, companionship, and dignity, helping to improve the overall well-being of the individual. With patience and dedication, a caretaker brings peace of mind to families, knowing their loved ones are in capable hands, receiving the attention and care they need to thrive.              </p>
+                A caretaker plays a vital role in providing compassionate support and care for those who need
+                assistance, whether it's for the elderly, individuals with disabilities, or those recovering from
+                illness. They ensure a safe and comfortable environment, assisting with daily tasks such as bathing,
+                dressing, and medication management.
+              </p>
             </div>
-
           </div>
           <div className="col-md-5 flex justify-end items-end">
             <img
-              className="img-fluid img-fluid rounded-start border rounded-lg m-5 "
+              className="img-fluid img-fluid rounded-start border rounded-lg m-5"
               style={{ height: "380px", width: "65%", objectFit: "cover" }}
               src="https://t3.ftcdn.net/jpg/00/14/97/78/360_F_14977840_BVZwpV5LTbqc1e13mBaBFb1TTr9K9tiA.jpg"
               alt=""

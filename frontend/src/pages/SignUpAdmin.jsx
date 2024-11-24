@@ -96,25 +96,45 @@ export default function SignUpAdmin() {
 
     return (
         <div>
-            <div className='flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900'>
-                <div className='w-full max-w-md mx-4 sm:mx-8 p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg mt-5 mb-5'>
-                    <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-                        <div className='flex items-center justify-center gap-2 pb-4'>
+            <div className='flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 '>
+                <div className='w-full max-w-6xl mx-4 sm:mx-8 p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg mt-0 mb-0 ml-0 mr-0'>
+                    <form onSubmit={handleSubmit} className='flex flex-wrap gap-4'>
+                        {/* Logo */}
+                        <div className='w-full flex items-center justify-center gap-2 pb-4'>
                             <img src={family} height={60} width={60} alt="logo" />
                             <span className='text-[#6531e0] text-3xl font-extrabold'>CareBuddy</span>
                         </div>
 
-                        <input type="text" size={40} placeholder='Full Name' className='border border-slate-600 p-3 rounded-lg' id='name' onChange={handleChange} />
-                        <input type="email" placeholder='E-mail address' className='border border-slate-600 p-3 rounded-lg' id='email' onChange={handleChange} />
-                        <input type="password" placeholder='Password' className='border border-slate-600 p-3 rounded-lg' id='password' onChange={handleChange} />
-                        <input type="password" placeholder='Re-type Password' className='border border-slate-600 p-3 rounded-lg' id='pwd' onChange={handleChange} />
-                        <input type="number" placeholder='Enter your age' className='border border-slate-600 p-3 rounded-lg' id='age' onChange={handleChange} />
-                        <input type="number" placeholder='Experience' className='border border-slate-600 p-3 rounded-lg' id='experience' onChange={handleChange} />
-                        <input type="number" placeholder='Expected Salary' className='border border-slate-600 p-3 rounded-lg' id='salary' onChange={handleChange} />
-                        <input type="number" placeholder='Enter your Phone-no.' className='border border-slate-600 p-3 rounded-lg' id='phone_no' onChange={handleChange} />
+                        {/* Row 1 */}
+                        <div className="w-full lg:w-[48%]">
+                            <input type="text" placeholder='Full Name' className='border border-slate-600 p-3 rounded-lg w-full' id='name' onChange={handleChange} />
+                        </div>
+                        <div className="w-full lg:w-[48%]">
+                            <input type="email" placeholder='E-mail address' className='border border-slate-600 p-3 rounded-lg w-full' id='email' onChange={handleChange} />
+                        </div>
+                        <div className="w-full lg:w-[48%]">
+                            <input type="password" placeholder='Password' className='border border-slate-600 p-3 rounded-lg w-full' id='password' onChange={handleChange} />
+                        </div>
+                        <div className="w-full lg:w-[48%]">
+                            <input type="password" placeholder='Re-type Password' className='border border-slate-600 p-3 rounded-lg w-full' id='pwd' onChange={handleChange} />
+                        </div>
 
-                        {/* Custom Gender Dropdown */}
-                        <div className="relative">
+                        {/* Row 2 */}
+                        <div className="w-full lg:w-[48%]">
+                            <input type="number" placeholder='Enter your age' className='border border-slate-600 p-3 rounded-lg w-full' id='age' onChange={handleChange} />
+                        </div>
+                        <div className="w-full lg:w-[48%]">
+                            <input type="number" placeholder='Experience' className='border border-slate-600 p-3 rounded-lg w-full' id='experience' onChange={handleChange} />
+                        </div>
+                        <div className="w-full lg:w-[48%]">
+                            <input type="number" placeholder='Expected Salary' className='border border-slate-600 p-3 rounded-lg w-full' id='salary' onChange={handleChange} />
+                        </div>
+                        <div className="w-full lg:w-[48%]">
+                            <input type="number" placeholder='Enter your Phone-no.' className='border border-slate-600 p-3 rounded-lg w-full' id='phone_no' onChange={handleChange} />
+                        </div>
+
+                        {/* Gender Dropdown */}
+                        <div className="w-full lg:w-[48%] relative">
                             <button
                                 className='border border-slate-600 p-3 rounded-lg w-full text-left'
                                 onClick={(e) => {
@@ -147,9 +167,9 @@ export default function SignUpAdmin() {
                                 </div>
                             )}
                         </div>
-                        
-                        {/* Role Selection (Radio Buttons) */}
-                        <div className='flex flex-col gap-2'>
+
+                        {/* Role Selection */}
+                        <div className="w-full lg:w-[48%] flex flex-col gap-2">
                             <label className='font-semibold'>Sign up as:</label>
                             <div className='flex items-center gap-4'>
                                 <label>
@@ -175,35 +195,46 @@ export default function SignUpAdmin() {
                             </div>
                         </div>
 
-                        <div className='flex gap-4 items-center'>
+                        
+                        {/* Privacy Checkbox */}
+                        <div className='w-full flex gap-4 items-center'>
                             <input type="checkbox" id='privacy' />
                             <label className='text-sm'>I would like to receive communications from<br /> CareBuddy according to the Privacy Policy.**</label>
                         </div>
-                        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/74a4beaa-b90d-4583-b003-a95cbabf0bdf">ChatBot</iframe>
 
-                        <a
-                            href="https://resident.uidai.gov.in/check-aadhaar-validity/en"
-                            className='bg-gray-200 text-black text-lg outline rounded-full p-2 px-5 hover:bg-gray-300 text-center block'
-                        >
-                            Verification
-                        </a>
-                        <label className="bg-green-500 text-white text-lg outline rounded-full p-2 px-5 hover:text-white hover:bg-green-600 text-center cursor-pointer">
-                            Upload Verified Image
-                            <input
-                                type="file"
-                                accept="image/*"
-                                className="hidden"
-                            />
-                        </label>
-                        
+                        {/* Aadhaar Verification */}
+                        <div className="w-full lg:w-[48%]">
+                            <a
+                                href="https://resident.uidai.gov.in/check-aadhaar-validity/en"
+                                className='bg-gray-200 text-black text-lg outline rounded-full p-2 px-5 hover:bg-gray-300 text-center block'
+                            >
+                                Verification
+                            </a>
+                        </div>
 
-                        <button type='submit' className='bg-[#6531e0] text-white text-lg outline rounded-full p-2 px-5 hover:text-white hover:bg-[#6531e0]'>
-                            {loading ? 'Signing Up...' : 'Sign Up'}
-                        </button>
+                        {/* Upload Image */}
+                        <div className="w-full lg:w-[48%]">
+                            <label className="bg-green-500 text-white text-lg outline rounded-full p-2 px-5 hover:text-white hover:bg-green-600 text-center cursor-pointer">
+                                Upload Verified Image
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    className="hidden"
+                                />
+                            </label>
+                        </div>
+
+                        {/* Submit Button */}
+                        <div className=" w-[50%]">
+                            <button type='submit' className='bg-[#6531e0] text-white text-lg outline rounded-full p-2 px-5 hover:text-white hover:bg-[#6531e0] w-full'>
+                                {loading ? 'Signing Up...' : 'Sign Up'}
+                            </button>
+                        </div>
 
                         <OAuth />
 
-                        <div className='flex flex-col items-center gap-2 mt-4'>
+                        {/* Footer Links */}
+                        <div className='w-full flex flex-col items-center gap-2 mt-4'>
                             <div className='flex gap-2 items-center'>
                                 <p className='text-slate-500 text-sm'>Already have an account?</p>
                                 <Link to='/sign-in'>
@@ -214,10 +245,10 @@ export default function SignUpAdmin() {
                                 <span className='text-[#6531e0] text-sm hover:underline'>Sign up as Customer</span>
                             </Link>
                         </div>
-                        
                     </form>
                 </div>
             </div>
         </div>
+
     );
 }
