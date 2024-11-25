@@ -1,40 +1,35 @@
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
+import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 function MyBookings() {
   const [bookings, setBookings] = useState([]); // Previous bookings
   const [displayBookings, setDisplayBookings] = useState([]); // New API bookings
   const [loading, setLoading] = useState(true);
-  const [loadingDisplay, setLoadingDisplay] = useState(true);
   const [error, setError] = useState(null);
 
   const { currentUser } = useSelector((state) => state.user);
-  console.log("Current User:", currentUser);
+  console.log(currentUser);
 
   useEffect(() => {
     const loadBookings = async () => {
       if (!currentUser?.email) return;
 
       try {
-        console.log("Fetching bookings for:", currentUser.email);
-        const response = await fetch(`/api/user/getInfo?userEmail=${currentUser.email}`);
-        const Booking = await response.json();
-        console.log("API Response:", Booking);
+        const response = await fetch(`/api/display/bookings?userEmail=${currentUser.email}`);
+        const data = await response.json();
 
         if (response.ok) {
-          const bookingData = Array.isArray(Booking) ? Booking : [Booking];
+          const bookingData = Array.isArray(data) ? data : [data];
           setBookings(bookingData);
         } else {
-          console.error('Response error:', Booking.error || response.status);
-          setError(Booking.error || 'Failed to fetch bookings');
+          setError(data.error || "Failed to fetch bookings");
         }
       } catch (err) {
-        console.error('Fetch error:', err);
-        setError('Something went wrong while fetching bookings.');
+        setError("Error fetching bookings");
+        console.error("Error:", err);
       } finally {
         setLoading(false);
       }
@@ -44,31 +39,39 @@ function MyBookings() {
   }, [currentUser?.email]);
 
   useEffect(() => {
-    const fetchBookings = async () => {
-      if (!currentUser?.email) return;
+    const fetchProfessionalBookings = async () => {
+      if (!bookings.length) return;
 
       try {
-        console.log("Fetching bookings for:", currentUser.email);
-        const response = await fetch(`/api/display/bookings?userEmail=${currentUser.email}`);
-        const data = await response.json();
-        console.log("API Response for bookings:", data);
+        const professionEmails = bookings
+          .map((booking) => booking.professionEmail)
+          .filter((email) => email);
 
-        if (response.ok) {
-          setDisplayBookings(data);
-        } else {
-          console.error('Error fetching bookings:', response.statusText);
-          setError('Failed to fetch bookings.');
-        }
+        if (!professionEmails.length) return;
+
+        const fetchPromises = professionEmails.map((email) =>
+          fetch(`/api/user/getInfo?userEmail=${email}`).then((res) =>
+            res.ok ? res.json() : Promise.reject(`Failed for ${email}`)
+          )
+        );
+
+        const results = await Promise.all(fetchPromises);
+        setDisplayBookings(results.flat());
       } catch (err) {
-        console.error('Error fetching bookings:', err);
-        setError('Something went wrong while fetching bookings.');
-      } finally {
-        setLoading(false);
+        setError("Error fetching professional bookings");
+        console.error("Error:", err);
       }
     };
 
-    fetchBookings();
-  }, [currentUser?.email]);
+    fetchProfessionalBookings();
+  }, [bookings]);
+
+  const combinedBookings = [...bookings, ...displayBookings].reduce((acc, booking) => {
+    if (!acc.find((b) => b._id === booking._id)) {
+      acc.push(booking);
+    }
+    return acc;
+  }, []);
 
   if (loading) {
     return <div className="text-center">Loading...</div>;
@@ -78,63 +81,79 @@ function MyBookings() {
     return <div className="text-center text-red-500">{error}</div>;
   }
 
-  if (bookings.length === 0) {
+  if (!combinedBookings.length) {
     return <div className="text-center">No bookings found.</div>;
   }
 
   return (
     <div className="flex justify-center">
       <div className="w-[1000px] items-center m-10">
-        {bookings.map((booking) => (
+        {displayBookings.map((booking, index) => (
           <div
-            key={booking._id}
+            key={booking._id || index}
             className="w-full card p-5 border border-gray-300 rounded-lg bg-slate-100 mb-5"
           >
             <div className="flex flex-row justify-between items-start">
               <div className="flex-1">
                 <h2 className="text-3xl font-bold mb-5">Booking Details</h2>
                 <div className="flex flex-col justify-start items-start mb-5">
-                  <p>
-                    <strong>Name:</strong> {booking.name}
-                  </p>
-                  <p>
-                    <strong>Profession Email:</strong> {booking.email}
-                  </p>
-                  <p>
-                    <strong>Charge:</strong> {booking.charge}
-                  </p>
-                  <p>
-                    <strong>Contact Number:</strong> {booking.phone}
-                  </p>
-                  <p>
-                    <strong>Gender:</strong> {booking.gender === 'M' ? 'Male' : booking.gender === 'F' ? 'Female' : 'Other'}
-                  </p>
-                  <p>
-                    <strong>Age:</strong> {booking.age}
-                  </p>
-                  <p>
-                    <strong>Profession:</strong> {booking.profession}
-                  </p>
-                  <strong>
-                    Rating:<span className="text-yellow-500">
-                      {Array.from({ length: 5 }, (_, index) => (
-                        <FontAwesomeIcon
-                          key={index}
-                          icon={index < booking.rating ? faStar : faStarEmpty}
-                        />
-                      ))}
-                    </span>
-                  </strong>
+                  {booking.name && (
+                    <>
+                      <p>
+                        <strong>Name:</strong> {booking.name}
+                      </p>
+                      <p>
+                        <strong>Charge:</strong> {booking.charge}
+                      </p>
+                      <p>
+                        <strong>Contact Number:</strong> {booking.phone}
+                      </p>
+                      <p>
+                        <strong>Email:</strong> {booking.email}
+                      </p>
+                      <p>
+                        <strong>Gender:</strong>{" "}
+                        {booking.gender === "M"
+                          ? "Male"
+                          : booking.gender === "F"
+                          ? "Female"
+                          : "Other"}
+                      </p>
+                      <p>
+                        <strong>Age:</strong> {booking.age}
+                      </p>
+                      <p>
+                        <strong>Profession:</strong> {booking.profession}
+                      </p>
+                      <strong>
+                        Rating:
+                        <span className="text-yellow-500">
+                          {Array.from({ length: 5 }, (_, index) => (
+                            <FontAwesomeIcon
+                              key={index}
+                              icon={index < booking.rating ? faStarSolid : faStarEmpty}
+                            />
+                          ))}
+                        </span>
+                      </strong>
+                      <p>
+                <strong>Booking Dates:</strong>{" "}
+                {`From ${new Date("2024-11-27").toLocaleDateString()} to ${new Date("2024-11-30").toLocaleDateString()}`}
+              </p>
+                    </>
+                  )}
                 </div>
               </div>
-              <div className="w-[200px] flex flex-col justify-between mr-10">
-                <img
-                  className="img-fluid rounded-start border rounded-lg"
-                  style={{ height: '180px', width: '100%', objectFit: 'cover' }}
-                  src={booking.profilePic}
-                  alt="User"
-                />
-              </div>
+              {booking.profilePic && (
+                <div className="w-[200px] flex flex-col justify-between mr-10">
+                  <img
+                    className="img-fluid rounded-start border rounded-lg"
+                    style={{ height: "180px", width: "100%", objectFit: "cover" }}
+                    src={booking.profilePic}
+                    alt="User"
+                  />
+                </div>
+              )}
             </div>
           </div>
         ))}
