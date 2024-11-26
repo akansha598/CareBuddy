@@ -66,12 +66,16 @@ function MyBookings() {
     fetchProfessionalBookings();
   }, [bookings]);
 
-  const combinedBookings = [...bookings, ...displayBookings].reduce((acc, booking) => {
-    if (!acc.find((b) => b._id === booking._id)) {
-      acc.push(booking);
-    }
-    return acc;
-  }, []);
+  const combinedBookings = bookings.map((booking, index) => {
+    const displayBooking = displayBookings[index]; // Match items by index
+    return displayBooking ? { ...booking, ...displayBooking } : booking; // Merge if exists
+  });
+
+  // Add any extra items in displayBookings that don't exist in bookings
+  //combinedBookings.push(...additionalBookings);
+
+  console.log("Merged array with aligned indexes:", combinedBookings);
+
 
   if (loading) {
     return <div className="text-center">Loading...</div>;
@@ -88,7 +92,7 @@ function MyBookings() {
   return (
     <div className="flex justify-center">
       <div className="w-[1000px] items-center m-10">
-        {displayBookings.map((booking, index) => (
+        {combinedBookings.map((booking, index) => (
           <div
             key={booking._id || index}
             className="w-full card p-5 border border-gray-300 rounded-lg bg-slate-100 mb-5"
@@ -116,14 +120,18 @@ function MyBookings() {
                         {booking.gender === "M"
                           ? "Male"
                           : booking.gender === "F"
-                          ? "Female"
-                          : "Other"}
+                            ? "Female"
+                            : "Other"}
                       </p>
                       <p>
                         <strong>Age:</strong> {booking.age}
                       </p>
                       <p>
                         <strong>Profession:</strong> {booking.profession}
+                      </p>
+                      <p>
+                        <strong>Booking Dates:</strong>{" "}
+                        {`From ${new Date(booking.dateFrom).toLocaleDateString()} to ${new Date(booking.dateTo).toLocaleDateString()}`}
                       </p>
                       <strong>
                         Rating:
@@ -136,10 +144,6 @@ function MyBookings() {
                           ))}
                         </span>
                       </strong>
-                      <p>
-                <strong>Booking Dates:</strong>{" "}
-                {`From ${new Date("2024-11-27").toLocaleDateString()} to ${new Date("2024-11-30").toLocaleDateString()}`}
-              </p>
                     </>
                   )}
                 </div>
