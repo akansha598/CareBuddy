@@ -5,8 +5,8 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 function MyBookings() {
-  const [bookings, setBookings] = useState([]); // Previous bookings
-  const [displayBookings, setDisplayBookings] = useState([]); // New API bookings
+  const [bookings, setBookings] = useState([]); 
+  const [displayBookings, setDisplayBookings] = useState([]); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -139,7 +139,7 @@ function MyBookings() {
                           {Array.from({ length: 5 }, (_, index) => (
                             <FontAwesomeIcon
                               key={index}
-                              icon={index < booking.rating ? faStarSolid : faStarEmpty}
+                              icon={index < 3 ? faStarSolid : faStarEmpty}
                             />
                           ))}
                         </span>

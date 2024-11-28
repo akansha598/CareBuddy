@@ -1,8 +1,9 @@
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react"; 
 import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
+import { faStar } from "@fortawesome/free-solid-svg-icons"; 
+import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons"; 
+
 import { toast } from "react-toastify";
 
 // BookingForm Component
@@ -27,7 +28,7 @@ function BookingForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Prepare the form data to send
     const bookingData = {
       professionEmail: formData.professionEmail,
@@ -37,7 +38,7 @@ function BookingForm() {
       dateTo: formData.dateTo,
       specialRequests: formData.specialRequests,
     };
-  
+
     try {
       // Send a POST request to the booking API
       const response = await fetch("/api/booking/create", {
@@ -47,15 +48,15 @@ function BookingForm() {
         },
         body: JSON.stringify(bookingData), // Send form data as JSON
       });
-  
+
       if (!response.ok) {
         // If the response is not ok, handle error
         throw new Error("Booking creation failed");
       }
-  
+
       const result = await response.json(); // Parse JSON response
       console.log("Booking created successfully:", result);
-  
+
       // Optionally reset the form
       setFormData({
         professionEmail: "",
@@ -65,17 +66,17 @@ function BookingForm() {
         dateTo: "",
         specialRequests: "",
       });
-  
+
       // Optionally, show success message or redirect
       toast.success("Booking created successfully!");
       navigate('/payment');
-  
+
     } catch (error) {
       console.error("Error:", error);
       toast.warning("Failed to create booking. Please try again.");
     }
   };
-  
+
 
   return (
     <div className="mt-10 w-full card p-5 border border-gray-300 rounded-lg bg-white">
@@ -162,6 +163,8 @@ function BookingPage() {
   const { state } = useLocation(); // Access the passed state
   const { person, profession } = state; // Destructure person and profession from state
 
+  const defaultRating = 3;
+
   return (
     <div className="flex justify-center">
       <div className="w-[1000px] items-center m-10">
@@ -185,7 +188,7 @@ function BookingPage() {
                     {Array.from({ length: 5 }, (_, index) => (
                       <FontAwesomeIcon
                         key={index}
-                        icon={index < person.rating ? faStarSolid : faStarEmpty}
+                        icon={index < defaultRating ? faStar : faStarEmpty} // Check if filled or empty star
                       />
                     ))}
                   </span>

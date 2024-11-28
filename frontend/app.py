@@ -14,38 +14,39 @@ caretaker_data = pd.read_csv("reshuffled_final_final_final.csv")  # Path to your
 # List of all possible one-hot encoded columns
 ONE_HOT_COLUMNS = [
     "Medical_Issue1_Arthritis", "Medical_Issue1_Asthma",
-       "Medical_Issue1_COPD", "Medical_Issue1_Cataracts",
-       "Medical_Issue1_Chronic Pain", "Medical_Issue1_Dementia",
-       "Medical_Issue1_Depression", "Medical_Issue1_Diabetes",
-       "Medical_Issue1_Epilepsy", "Medical_Issue1_Glaucoma",
-       "Medical_Issue1_Hearing Loss", "Medical_Issue1_Heart Disease",
-       "Medical_Issue1_Hypertension", "Medical_Issue1_Obesity",
-       "Medical_Issue1_Osteoporosis", "Medical_Issue1_Parkinson's",
-       "Medical_Issue1_Respiratory Issues", "Medical_Issue1_Stroke",
-       "Medical_Issue1_Urinary Incontinence", "Medical_Issue2_Arthritis",
-       "Medical_Issue2_Asthma", "Medical_Issue2_COPD",
-       "Medical_Issue2_Cataracts", "Medical_Issue2_Chronic Pain",
-       "Medical_Issue2_Dementia", "Medical_Issue2_Depression",
-       "Medical_Issue2_Diabetes", "Medical_Issue2_Epilepsy",
-       "Medical_Issue2_Glaucoma", "Medical_Issue2_Hearing Loss",
-       "Medical_Issue2_Heart Disease", "Medical_Issue2_Hypertension",
-       "Medical_Issue2_Obesity", "Medical_Issue2_Osteoporosis",
-       "Medical_Issue2_Parkinson's", "Medical_Issue2_Respiratory Issues",
-       "Medical_Issue2_Stroke", "Medical_Issue2_Urinary Incontinence",
-       "Medical_Issue3_Arthritis", "Medical_Issue3_Asthma",
-       "Medical_Issue3_COPD", "Medical_Issue3_Cataracts",
-       "Medical_Issue3_Chronic Pain", "Medical_Issue3_Dementia",
-       "Medical_Issue3_Depression", "Medical_Issue3_Diabetes",
-       "Medical_Issue3_Epilepsy", "Medical_Issue3_Glaucoma",
-       "Medical_Issue3_Hearing Loss", "Medical_Issue3_Heart Disease",
-       "Medical_Issue3_Hypertension", "Medical_Issue3_Obesity",
-       "Medical_Issue3_Osteoporosis", "Medical_Issue3_Parkinson's",
-       "Medical_Issue3_Respiratory Issues", "Medical_Issue3_Stroke",
-       "Medical_Issue3_Urinary Incontinence",
-       "Caretaker_Expertise_General Practitioner",
-       "Caretaker_Expertise_Geriatric Specialist", "Caretaker_Expertise_Nurse",
-       "Caretaker_Expertise_Nutritionist",
-       "Caretaker_Expertise_Physiotherapist"]
+    "Medical_Issue1_COPD", "Medical_Issue1_Cataracts",
+    "Medical_Issue1_Chronic Pain", "Medical_Issue1_Dementia",
+    "Medical_Issue1_Depression", "Medical_Issue1_Diabetes",
+    "Medical_Issue1_Epilepsy", "Medical_Issue1_Glaucoma",
+    "Medical_Issue1_Hearing Loss", "Medical_Issue1_Heart Disease",
+    "Medical_Issue1_Hypertension", "Medical_Issue1_Obesity",
+    "Medical_Issue1_Osteoporosis", "Medical_Issue1_Parkinson's",
+    "Medical_Issue1_Respiratory Issues", "Medical_Issue1_Stroke",
+    "Medical_Issue1_Urinary Incontinence", "Medical_Issue2_Arthritis",
+    "Medical_Issue2_Asthma", "Medical_Issue2_COPD",
+    "Medical_Issue2_Cataracts", "Medical_Issue2_Chronic Pain",
+    "Medical_Issue2_Dementia", "Medical_Issue2_Depression",
+    "Medical_Issue2_Diabetes", "Medical_Issue2_Epilepsy",
+    "Medical_Issue2_Glaucoma", "Medical_Issue2_Hearing Loss",
+    "Medical_Issue2_Heart Disease", "Medical_Issue2_Hypertension",
+    "Medical_Issue2_Obesity", "Medical_Issue2_Osteoporosis",
+    "Medical_Issue2_Parkinson's", "Medical_Issue2_Respiratory Issues",
+    "Medical_Issue2_Stroke", "Medical_Issue2_Urinary Incontinence",
+    "Medical_Issue3_Arthritis", "Medical_Issue3_Asthma",
+    "Medical_Issue3_COPD", "Medical_Issue3_Cataracts",
+    "Medical_Issue3_Chronic Pain", "Medical_Issue3_Dementia",
+    "Medical_Issue3_Depression", "Medical_Issue3_Diabetes",
+    "Medical_Issue3_Epilepsy", "Medical_Issue3_Glaucoma",
+    "Medical_Issue3_Hearing Loss", "Medical_Issue3_Heart Disease",
+    "Medical_Issue3_Hypertension", "Medical_Issue3_Obesity",
+    "Medical_Issue3_Osteoporosis", "Medical_Issue3_Parkinson's",
+    "Medical_Issue3_Respiratory Issues", "Medical_Issue3_Stroke",
+    "Medical_Issue3_Urinary Incontinence",
+    "Caretaker_Expertise_General Practitioner",
+    "Caretaker_Expertise_Geriatric Specialist", "Caretaker_Expertise_Nurse",
+    "Caretaker_Expertise_Nutritionist",
+    "Caretaker_Expertise_Physiotherapist"
+]
 
 @app.route("/recommend", methods=["POST"])
 def recommend():
@@ -86,7 +87,10 @@ def recommend():
             recommendations = caretaker_data[
                 (caretaker_data["Caretaker_Expertise"] == preferred_specialty) & 
                 (caretaker_data["Recommended"] == 1)
-            ][["Caretaker_Name", "Caretaker_Expertise", "Rating"]].to_dict(orient="records")
+            ][["Caretaker_Name", "Caretaker_Expertise", "Rating"]]
+            
+            # Remove duplicates based on Caretaker_Name
+            recommendations = recommendations.drop_duplicates(subset="Caretaker_Name").to_dict(orient="records")
 
             if not recommendations:
                 return jsonify({"message": "No caretakers found for the given issues and specialty"}), 404

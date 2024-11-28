@@ -1,15 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { useSelector } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons"; 
+import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons"; 
+
 
 function Explore() {
   const { currentUser } = useSelector((state) => state.user);
   const [babysitters, setBabysitters] = useState([]);
   const [caretakers, setCaretakers] = useState([]);
   const navigate = useNavigate();
+  const defaultRating = 3;
 
   const loadBabysittersData = async () => {
     try {
@@ -65,7 +67,6 @@ function Explore() {
   }, []);
 
   const handleBooking = (person, profession) => {
-    // Navigate to booking page with the selected person and profession details
     navigate("/booking", { state: { person, profession } });
   };
 
@@ -101,7 +102,7 @@ function Explore() {
                         {Array.from({ length: 5 }, (_, index) => (
                           <FontAwesomeIcon
                             key={index}
-                            icon={index < data.rating ? faStar : faStarEmpty}
+                            icon={index < defaultRating ? faStar : faStarEmpty} 
                           />
                         ))}
                       </span>
@@ -136,14 +137,24 @@ function Explore() {
         <h2 className="text-4xl font-bold flex flex-col items-center mt-3 text-white bg-black p-2 m-2">
           Care-Takers
         </h2>
-        <div className="flex justify-end items-end mt-5 mb-5 mr-5">
-          <Link to="/indexMl">
-            <button
-              className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
-            >
-              Recommendation
-            </button>
-          </Link>
+        <div className="flex justify-end items-end mt-5 mr-5">
+          {currentUser ? (
+            <Link to="/indexMl">
+              <button
+                className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+              >
+                Get the best Suggestions!
+              </button>
+            </Link>
+          ) : (
+            <Link to="/sign-in">
+              <button
+                className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white"
+              >
+                View Details
+              </button>
+            </Link>
+          )}
         </div>
         <div className="flex flex-row flex-wrap justify-start m-5">
           {caretakers.map((data) => (
@@ -171,7 +182,7 @@ function Explore() {
                         {Array.from({ length: 5 }, (_, index) => (
                           <FontAwesomeIcon
                             key={index}
-                            icon={index < data.rating ? faStar : faStarEmpty}
+                            icon={index < defaultRating ? faStar : faStarEmpty} // Check if filled or empty star
                           />
                         ))}
                       </span>

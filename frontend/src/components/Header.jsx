@@ -49,9 +49,6 @@ export default function Header() {
         <Link to="/about">
           <li className="font-bold hover:text-[#6531e0] text-lg">About</li>
         </Link>
-        <Link to="/stories">
-          <li className="font-bold hover:text-[#6531e0] text-lg">Stories</li>
-        </Link>
         <Link to="/explore">
           <li className="font-bold hover:text-[#6531e0] text-lg">Explore</li>
         </Link>
@@ -76,7 +73,7 @@ export default function Header() {
         {currentUser ? (
           <Link to="/myBookings">
             <button className="text-white text-lg font-semibold outline rounded-xl p-1 px-4 bg-primary hover:text-primary hover:bg-white">
-              Bookings
+              My Bookings
             </button>
           </Link>
         ) : (

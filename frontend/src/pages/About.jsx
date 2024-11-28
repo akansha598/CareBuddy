@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const BannerImg = {
   backgroundImage: "url('https://t4.ftcdn.net/jpg/05/00/76/75/360_F_500767502_AdezwSUsyb04l79RpV6zubKulRnIHpd0.jpg')",
-  backgroundPosition: "bottom",
+  backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   height: "100%",
@@ -12,8 +12,6 @@ const BannerImg = {
 };
 
 export default function About() {
-  const [showChatbot, setShowChatbot] = useState(false); // State to manage chatbot visibility
-
   useEffect(() => {
     AOS.init({
       offset: 100,
@@ -26,59 +24,133 @@ export default function About() {
 
   return (
     <div>
-      <div>
-        {/* First featurette */}
-        <div>
-          <div className="flex flex-row flex-wrap justify-start m-5">
-            <div className="col-md-7 order-md-1 text-start flex flex-col justify-start">
-              <h2 className="text-4xl font-bold text-black p-3" data-aos="zoom-in">
+      <div className="relative">
+        {/* Hero Section */}
+        <div className="text-center py-12" style={BannerImg}>
+          <h1 className="text-5xl font-bold text-white" data-aos="fade-down">
+            About Us
+          </h1>
+          <p className="text-lg text-gray-200 mt-4" data-aos="fade-up">
+            Trusted Caregivers, Providing Safe and Compassionate Services for Your Loved Ones
+          </p>
+        </div>
+
+        {/* First Section */}
+        <div className="container mx-auto py-12 px-5">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
+            <div className="text-start lg:w-1/2">
+              <h2 className="text-4xl font-bold text-black mb-5" data-aos="zoom-in">
                 Trusted Babysitters,{" "}
-                <span className="text-muted text-gray-500">Caring for Your Child with Safety and Responsibility.</span>
+                <span className="text-gray-500">Caring for Your Child with Safety and Responsibility</span>
               </h2>
-              <p className="lead m-3">
+              <p className="text-lg leading-relaxed">
                 A babysitter is a responsible caregiver who takes care of children in the absence of their parents,
                 ensuring their safety and well-being. They engage children in various activities, help with homework,
-                and maintain daily routines like meals and bedtime. Babysitters provide a nurturing and secure
-                environment, catering to the unique needs of each child, whether it's for a few hours or an extended
-                period.
+                and maintain daily routines like meals and bedtime.
               </p>
+              <p className="text-lg leading-relaxed mt-4">
+                Babysitters provide a nurturing and secure environment, catering to the unique needs of each child,
+                whether for a few hours or an extended period. Your child's safety and happiness are our priority.
+              </p>
+              <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">
+                Learn More
+              </button>
             </div>
-            <div className="col-md-5 order-md-2 w-2/3 flex flex-col justify-end p-2 m-3">
+            <div className="lg:w-1/2">
               <img
-                className="img-fluid rounded-start border rounded-lg"
-                style={{ height: "380px", width: "650%", objectFit: "cover" }}
+                className="img-fluid rounded-lg shadow-lg"
+                style={{ objectFit: "cover" }}
                 src="https://media.istockphoto.com/id/534134538/photo/mothers-and-a-child-hands.jpg?s=612x612&w=0&k=20&c=DwTe7hNlwO-tQGlAvDf_INmfN-eJqEpj-xtpliZsW18="
-                alt="featurette"
+                alt="Babysitting"
               />
             </div>
           </div>
         </div>
 
-        {/* Second featurette */}
-        <div className="row featurette d-flex justify-content-end align-items-end mt-10">
-          <div className="text-end">
-            <h2 className="text-4xl font-bold m-3" data-aos="zoom-in">
-              Compassionate Caretakers,{" "}
-              <span className="text-muted text-gray-500">Ensuring Comfort and Dignity for Your Loved Ones</span>
+        {/* Features Section */}
+        <div className="bg-gray-100 py-12">
+          <div className="container mx-auto px-5">
+            <h2 className="text-center text-4xl font-bold mb-10" data-aos="fade-up">
+              Why Choose Us?
             </h2>
-            <div className="flex justify-end items-end ml-5">
-              <p className="lead m-3">
-                A caretaker plays a vital role in providing compassionate support and care for those who need
-                assistance, whether it's for the elderly, individuals with disabilities, or those recovering from
-                illness. They ensure a safe and comfortable environment, assisting with daily tasks such as bathing,
-                dressing, and medication management.
-              </p>
+            <div className="flex flex-col lg:flex-row gap-8 justify-center">
+              <div
+                className="bg-white p-6 rounded-lg shadow-md flex-1"
+                data-aos="flip-left"
+              >
+                <h3 className="text-xl font-bold text-blue-600 mb-3">Experienced Professionals</h3>
+                <p className="text-gray-600">
+                  Our caregivers are trained and experienced to provide the best care for children and elders.
+                </p>
+              </div>
+              <div
+                className="bg-white p-6 rounded-lg shadow-md flex-1"
+                data-aos="flip-left"
+              >
+                <h3 className="text-xl font-bold text-blue-600 mb-3">Safe and Secure</h3>
+                <p className="text-gray-600">
+                  Safety is our priority. Our team ensures a nurturing and secure environment at all times.
+                </p>
+              </div>
+              <div
+                className="bg-white p-6 rounded-lg shadow-md flex-1"
+                data-aos="flip-left"
+              >
+                <h3 className="text-xl font-bold text-blue-600 mb-3">24/7 Availability</h3>
+                <p className="text-gray-600">
+                  We provide flexible services tailored to your needs, available round the clock.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="col-md-5 flex justify-end items-end">
-            <img
-              className="img-fluid img-fluid rounded-start border rounded-lg m-5"
-              style={{ height: "380px", width: "65%", objectFit: "cover" }}
-              src="https://t3.ftcdn.net/jpg/00/14/97/78/360_F_14977840_BVZwpV5LTbqc1e13mBaBFb1TTr9K9tiA.jpg"
-              alt=""
-            />
+        </div>
+
+        {/* Second Section */}
+        <div className="container mx-auto py-12 px-5">
+          <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-8">
+            <div className="text-end lg:w-1/2">
+              <h2 className="text-4xl font-bold mb-5" data-aos="zoom-in">
+                Compassionate Caretakers,{" "}
+                <span className="text-gray-500">Ensuring Comfort and Dignity for Your Loved Ones</span>
+              </h2>
+              <p className="text-lg leading-relaxed">
+                A caretaker plays a vital role in providing compassionate support and care for those who need
+                assistance. Whether it's the elderly, individuals with disabilities, or those recovering from illness,
+                we ensure their comfort and dignity.
+              </p>
+              <p className="text-lg leading-relaxed mt-4">
+                From managing daily tasks to emotional support, our caretakers provide personalized care with empathy
+                and professionalism.
+              </p>
+              <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">
+                Explore Services
+              </button>
+            </div>
+            <div className="lg:w-1/2">
+              <img
+                className="img-fluid rounded-lg shadow-lg"
+                style={{ objectFit: "cover" }}
+                src="https://t3.ftcdn.net/jpg/00/14/97/78/360_F_14977840_BVZwpV5LTbqc1e13mBaBFb1TTr9K9tiA.jpg"
+                alt="Caretaker"
+              />
+            </div>
           </div>
         </div>
+
+        {/* Footer / Credits Section */}
+        <div className="bg-gradient-to-r from-yellow-300 to-yellow-500 py-6 m-5 rounded-lg shadow-lg">
+          <p className="text-center text-black text-lg font-medium">
+            Made with <span className="text-red-500 text-xl"></span> by{" "}
+            <span className="font-bold text-black underline decoration-dotted">
+              Samarth Narayan, Akansha Vasistha, Ankita Raj,
+            </span>{" "}
+            and{" "}
+            <span className="font-bold text-black underline decoration-dotted">
+              Prashasti Chaturvedi
+            </span>
+          </p>
+        </div>
+
       </div>
     </div>
   );
