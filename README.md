@@ -1,3 +1,4 @@
+#care
 #**CARE BUDDY : Caretakers and Babysitters Website**
 
 Care Buddy is an innovative solution designed to connect individuals and families with trusted babysitters and caretakers tailored to their unique needs. This platform simplifies the caregiving process by providing an intuitive interface for users to browse detailed caretaker profiles, filter options based on preferences, and schedule bookings effortlessly.
