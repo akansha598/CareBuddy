@@ -1,6 +1,6 @@
 # **CARE BUDDY : Caretakers and Babysitters Website**
 
-Care Buddy is an innovative solution designed to connect individuals and families with trusted babysitters and caretakers tailored to their unique needs. This platform simplifies the caregiving process by providing an intuitive interface for users to browse detailed caretaker profiles, filter options based on preferences, and schedule bookings effortlessly. Care Buddy apart is its focus on personalization, offering intelligent recommendations that match users with caregivers suited to specific requirements, such as elderly health conditions or specialized care needs. e.
+Care Buddy is an innovative solution designed to connect individuals and families with trusted babysitters and caretakers tailored to their unique needs. This platform simplifies the caregiving process by providing an intuitive interface for users to browse detailed caretaker profiles, filter options based on preferences, and schedule bookings effortlessly. Care Buddy apart is its focus on personalization, offering intelligent recommendations that match users with caregivers suited to specific requirements, such as elderly health conditions or specialized care needs.
 
 # Features
 **1. Profile Browsing and Filtering**
