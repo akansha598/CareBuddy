@@ -26,3 +26,11 @@ Care Buddy is an innovative solution designed to connect individuals and familie
 **6. User-Friendly Interface**
  - Simplified navigation for all users, including detailed caregiver overviews.
  - Responsive design for access across devices.
+
+
+# DEMO VIDEO
+https://drive.google.com/file/d/1pdr4N4x148Ljbj0aIfo23EQcEeDEXjbx/view?usp=sharing
+
+
+![image](https://github.com/user-attachments/assets/b1bf2ecb-f758-4858-b78f-ec0f0f03c293)
+
