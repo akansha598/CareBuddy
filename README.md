@@ -32,5 +32,26 @@ Care Buddy is an innovative solution designed to connect individuals and familie
 https://drive.google.com/file/d/1pdr4N4x148Ljbj0aIfo23EQcEeDEXjbx/view?usp=sharing
 
 
+
+
 ![image](https://github.com/user-attachments/assets/b1bf2ecb-f758-4858-b78f-ec0f0f03c293)
+
+
+![image](https://github.com/user-attachments/assets/d16cce17-8b55-4758-b618-5aa983643e56)
+
+![image](https://github.com/user-attachments/assets/a4e30aa6-ac69-47bd-9e15-2e58b26eab02)
+
+![image](https://github.com/user-attachments/assets/5e2a2a7c-2a25-4007-b472-4608fb597a5f)
+
+
+![image](https://github.com/user-attachments/assets/e4dd4c7a-bf44-4bfb-989a-3c133eb032f2)
+
+![image](https://github.com/user-attachments/assets/f56da6f5-f8db-48e1-bf9c-c7575f74d05f)
+
+![image](https://github.com/user-attachments/assets/52bb8449-445e-4c63-975f-a069dbfda2ba)
+
+
+
+
+
 
