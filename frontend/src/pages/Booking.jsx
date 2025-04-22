@@ -200,7 +200,7 @@ function BookingPage() {
             <div className="w-[200px] flex flex-col justify-between mr-10">
               <img
                 className="img-fluid rounded-start border rounded-lg"
-                style={{ height: "180px", width: "100%", objectFit: "cover" }}
+                style={{ height: "260px", width: "100%", objectFit: "cover" }}
                 src={person.profilePic}
                 alt="Card image cap"
               />

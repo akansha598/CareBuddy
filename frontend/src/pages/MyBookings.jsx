@@ -5,13 +5,12 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 function MyBookings() {
-  const [bookings, setBookings] = useState([]); 
-  const [displayBookings, setDisplayBookings] = useState([]); 
+  const [bookings, setBookings] = useState([]);
+  const [displayBookings, setDisplayBookings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const { currentUser } = useSelector((state) => state.user);
-  console.log(currentUser);
 
   useEffect(() => {
     const loadBookings = async () => {
@@ -23,7 +22,11 @@ function MyBookings() {
 
         if (response.ok) {
           const bookingData = Array.isArray(data) ? data : [data];
-          setBookings(bookingData);
+          // Sort latest bookings first
+          const sortedBookings = bookingData.sort(
+            (a, b) => new Date(b.dateFrom) - new Date(a.dateFrom)
+          );
+          setBookings(sortedBookings);
         } else {
           setError(data.error || "Failed to fetch bookings");
         }
@@ -45,9 +48,7 @@ function MyBookings() {
       try {
         const professionEmails = bookings
           .map((booking) => booking.professionEmail)
-          .filter((email) => email);
-
-        if (!professionEmails.length) return;
+          .filter(Boolean);
 
         const fetchPromises = professionEmails.map((email) =>
           fetch(`/api/user/getInfo?userEmail=${email}`).then((res) =>
@@ -67,26 +68,13 @@ function MyBookings() {
   }, [bookings]);
 
   const combinedBookings = bookings.map((booking, index) => {
-    const displayBooking = displayBookings[index]; // Match items by index
-    return displayBooking ? { ...booking, ...displayBooking } : booking; // Merge if exists
+    const displayBooking = displayBookings[index];
+    return displayBooking ? { ...booking, ...displayBooking } : booking;
   });
 
-  // Add any extra items in displayBookings that don't exist in bookings
-  //combinedBookings.push(...additionalBookings);
-
-  console.log("Merged array with aligned indexes:", combinedBookings);
-
-
-  if (loading) {
-    return <div className="text-center">Loading...</div>;
-  }
-
-  if (error) {
-    return <div className="text-center text-red-500">{error}</div>;
-  }
-
-  if (!combinedBookings.length) 
-    return <div className="text-center">No bookings found.</div>;
+  if (loading) return <div className="text-center">Loading...</div>;
+  if (error) return <div className="text-center text-red-500">{error}</div>;
+  if (!combinedBookings.length) return <div className="text-center">No bookings found.</div>;
 
   return (
     <div className="flex justify-center">
@@ -102,43 +90,27 @@ function MyBookings() {
                 <div className="flex flex-col justify-start items-start mb-5">
                   {booking.name && (
                     <>
-                      <p>
-                        <strong>Name:</strong> {booking.name}
-                      </p>
-                      <p>
-                        <strong>Charge:</strong> {booking.charge}
-                      </p>
-                      <p>
-                        <strong>Contact Number:</strong> {booking.phone}
-                      </p>
-                      <p>
-                        <strong>Email:</strong> {booking.email}
-                      </p>
+                      <p><strong>Name:</strong> {booking.name}</p>
+                      <p><strong>Charge:</strong> {booking.charge}</p>
+                      <p><strong>Contact Number:</strong> {booking.phone}</p>
+                      <p><strong>Email:</strong> {booking.email}</p>
                       <p>
                         <strong>Gender:</strong>{" "}
-                        {booking.gender === "M"
-                          ? "Male"
-                          : booking.gender === "F"
-                            ? "Female"
-                            : "Other"}
+                        {booking.gender === "M" ? "Male" : booking.gender === "F" ? "Female" : "Other"}
                       </p>
-                      <p>
-                        <strong>Age:</strong> {booking.age}
-                      </p>
-                      <p>
-                        <strong>Profession:</strong> {booking.profession}
-                      </p>
+                      <p><strong>Age:</strong> {booking.age}</p>
+                      <p><strong>Profession:</strong> {booking.profession}</p>
                       <p>
                         <strong>Booking Dates:</strong>{" "}
                         {`From ${new Date(booking.dateFrom).toLocaleDateString()} to ${new Date(booking.dateTo).toLocaleDateString()}`}
                       </p>
                       <strong>
                         Rating:
-                        <span className="text-yellow-500">
-                          {Array.from({ length: 5 }, (_, index) => (
+                        <span className="text-yellow-500 ml-1">
+                          {Array.from({ length: 5 }, (_, i) => (
                             <FontAwesomeIcon
-                              key={index}
-                              icon={index < 3 ? faStarSolid : faStarEmpty}
+                              key={i}
+                              icon={i < 3 ? faStarSolid : faStarEmpty}
                             />
                           ))}
                         </span>
