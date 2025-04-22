@@ -85,9 +85,8 @@ function MyBookings() {
     return <div className="text-center text-red-500">{error}</div>;
   }
 
-  if (!combinedBookings.length) {
+  if (!combinedBookings.length) 
     return <div className="text-center">No bookings found.</div>;
-  }
 
   return (
     <div className="flex justify-center">
@@ -152,7 +151,7 @@ function MyBookings() {
                 <div className="w-[200px] flex flex-col justify-between mr-10">
                   <img
                     className="img-fluid rounded-start border rounded-lg"
-                    style={{ height: "180px", width: "100%", objectFit: "cover" }}
+                    style={{ height: "270px", width: "100%", objectFit: "cover" }}
                     src={booking.profilePic}
                     alt="User"
                   />
